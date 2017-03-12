@@ -1,0 +1,50 @@
+" Escape with fj
+inoremap fj <esc>
+
+" Disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" Enable quick help lookup
+nnoremap <F1> :help <C-r><C-w><CR>
+
+" Open vimrc.local
+nnoremap <leader>ev :vsplit ~/.vimrc.local<cr>
+
+" Source vimrc.local
+nnoremap <leader>sv :source ~/.vimrc.local<cr>
+
+" Capitalize previous word in Insert Mode
+inoremap <leader><c-u> <esc>vbU
+
+" Capitalize previous word in Normal Mode
+nnoremap <leader><c-u> viwU
+
+" Abbreviate my email
+iabbrev @@ jake@jakeworth.com
+
+" Always check spelling and turn off numbers in markdown files
+augroup spellcheck_documentation
+	autocmd BufNewFile,BufRead *.md setlocal spell
+	autocmd BufNewFile,BufRead *.rdoc setlocal spell
+
+	autocmd BufNewFile,BufRead *.md setlocal nonu
+	autocmd BufNewFile,BufRead *.rdoc setlocal nonu
+augroup END
+
+set secure
+set exrc
+
+" Dillon and Jake Sort™
+vnoremap <F5> :sort<CR>
+
+" Friendly startup message
+autocmd VimEnter * echo "Good Morning"
+
+" Use a color scheme I like
+color railscasts
+
+" Allow Vim to overwrite the original crontab
+au FileType crontab setlocal bkc=yes
