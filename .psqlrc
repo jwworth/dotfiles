@@ -1,0 +1,5 @@
+-- Use a unique history file for every database
+\set HISTFILE ~/.psql_history-:DBNAME
+
+-- Set nulls to skulls
+\pset null 💀
