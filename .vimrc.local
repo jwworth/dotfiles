@@ -48,3 +48,12 @@ color railscasts
 
 " Allow Vim to overwrite the original crontab
 au FileType crontab setlocal bkc=yes
+
+" Make Neoformat run on save
+autocmd BufWritePre *.js Neoformat
+
+augroup PrettierJs
+  autocmd!
+  autocmd FileType javascript,javascript.jsx setlocal formatprg=prettier\ --stdin\ --print-width\ 80\ --single-quote\ --trailing-comma\ es5
+  autocmd BufWritePre *.js,*.jsx Neoformat
+augroup END
