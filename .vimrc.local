@@ -7,6 +7,9 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" Always show line numbers
+set nu
+
 " Enable quick help lookup
 nnoremap <F1> :help <C-r><C-w><CR>
 
