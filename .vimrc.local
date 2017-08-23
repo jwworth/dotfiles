@@ -41,7 +41,7 @@ set exrc
 vnoremap <F5> :sort<CR>
 
 " Friendly startup message
-autocmd VimEnter * echo "Good Morning"
+autocmd VimEnter * echo "Buenos Dias"
 
 " Use a color scheme I like
 color railscasts
