@@ -10,6 +10,13 @@ noremap <Right> <NOP>
 " Always show line numbers
 set nu
 
+" Support project-specific .vimrc.local's
+set secure
+set exrc
+
+" Substitute a highlighted word
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 " Enable quick help lookup
 nnoremap <F1> :help <C-r><C-w><CR>
 
@@ -36,9 +43,6 @@ augroup spellcheck_documentation
   autocmd BufNewFile,BufRead *.md setlocal nonu
   autocmd BufNewFile,BufRead *.rdoc setlocal nonu
 augroup END
-
-set secure
-set exrc
 
 " Dillon and Jake Sort™
 vnoremap <F5> :sort<CR>
