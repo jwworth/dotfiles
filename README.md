@@ -10,16 +10,23 @@ found in the [Hashrocket Dotmatrix](https://github.com/hashrocket/dotmatrix).
 ### Installation
 
 ```
+$ cd code_directory
 $ git clone https://github.com/jwworth/dotfiles.git
 ```
 
 Next, create a symlink for each file from the root directory:
 
 ```
-$ ln -s  ~/path/to/dotfiles/.example.local ~/
+$ ln -s  ~/code_directory/dotfiles/.example.local ~/
 ```
 
-Each file represents a symlink to a file in the root directory.
+Then, install dependencies:
+
+```
+$ gem install rubocop
+$ yarn add -g hamllint
+$ yarn add -g eslint
+```
 
 ### License
 
