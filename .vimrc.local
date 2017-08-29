@@ -47,9 +47,6 @@ augroup END
 " Dillon and Jake Sort™
 vnoremap <F5> :sort<CR>
 
-" Friendly startup message
-autocmd VimEnter * echo "Buenos Dias"
-
 " Use a color scheme I like
 color railscasts
 
