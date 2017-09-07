@@ -1,2 +1,2 @@
-sbdchd/neoformat
-neomake/neomake
+Plug 'sbdchd/neoformat'
+Plug 'neomake/neomake'
