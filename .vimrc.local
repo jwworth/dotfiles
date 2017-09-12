@@ -14,7 +14,7 @@ set nu
 set secure
 set exrc
 
-" Substitute a highlighted word
+" Substitute a highlighted word (h/t Vidal)
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Enable quick help lookup
