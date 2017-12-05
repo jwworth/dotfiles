@@ -6,3 +6,13 @@ eval "$(~/hashrocket/dotmatrix/hr/bin/hr init -)"
 
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Aliases
+alias v='vim'
+alias vi='vim'
+alias aliases='vim ~/oss/dotfiles/.zshrc.local'
+alias dotfiles='cd ~/oss/dotfiles'
+alias bi='bundle install -j 8'
+alias oss='cd ~/oss'
+alias typeless='history n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | tail -n 100'
+alias mt='mix test'
