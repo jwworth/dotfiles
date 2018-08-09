@@ -83,7 +83,7 @@ nnoremap <leader>p :!prettier %<CR>
 
 augroup PrettierJs
   autocmd!
-  autocmd BufWritePre *.js,*.jsx Neoformat
+  autocmd BufWritePre *.js,*.jsx,*.rs Neoformat
 augroup END
 
 " Neomake settings ----------------------------------------------------
