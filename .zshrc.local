@@ -7,15 +7,66 @@ eval "$(~/hashrocket/dotmatrix/hr/bin/hr init -)"
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
 
-# Aliases
-alias v='vim'
-alias vi='vim'
+# ALIASES
+
+# Shorthands for my favorite editor
+alias v='vim' alias vi='vim'
+
+# Opens this file
 alias aliases='vim ~/oss/dotfiles/.zshrc.local'
+
+# Jump to my dotfiles
 alias dotfiles='cd ~/oss/dotfiles'
-alias nblog='function _blog(){ vim "Dropbox/blog/$1.md";};_blog'
-alias blog='cd ~/Dropbox/blog'
-alias bi='bundle install -j 8'
+
+# Jump to my OSS directory
 alias oss='cd ~/oss'
+
+# Jump to my blog directory
+alias blog='cd ~/Dropbox/blog'
+
+# New blow post
+alias nblog='function _blog(){ vim "Dropbox/blog/$1.md";};_blog'
+
+# Install Rubygems quickly
+alias bi='bundle install -j 8'
+
+# Open Tmux in my side project
 alias qm='mux quartermaster'
+
+# Find commands I type often
 alias typeless='history n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | tail -n 100'
+
+# Run Elixir tests
 alias mt='mix test'
+
+# Deploy an Elixir application to staging
+alias mds='mix deploy staging'
+
+# Deploy an Elixir application to production
+alias mdp='mix deploy production'
+
+# Download an Exercism Go exercise, run tests, open Vim
+function exergo() {
+  exercism download --exercise=$1 --track=go
+  cd ~/Exercism/go/$1
+  go test
+  vim -o *.go
+}
+
+# Fast-forward my branch to master's HEAD
+alias gmr='git checkout master && git pull --rebase && git checkout - && git rebase master'
+
+# Interactively rebase a feature branch off the fork from master
+alias grim='git rebase -i master'
+
+# Fast-forward my branch and open an interactive rebase
+alias mgrim='gmr && grim'
+
+# Make a 'beep' sound every <n> seconds
+function timer () {
+  while true
+  do
+    afplay /System/Library/Sounds/Ping.aiff
+    sleep $1
+  done
+}
