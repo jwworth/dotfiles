@@ -106,3 +106,9 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 let g:mix_format_on_save = 1
 let g:mix_format_options = '--check-equivalent'
 let g:mix_format_silent_errors = 1
+
+" FZF
+let $FZF_DEFAULT_COMMAND = 'ag --hidden -l -g ""'
+nnoremap <silent> <C-b> :Buffers<CR>
+nnoremap <silent> <C-g>g :Ag<CR>
+nnoremap <silent> <C-p> :Files<CR>
