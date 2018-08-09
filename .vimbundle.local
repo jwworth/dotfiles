@@ -1,5 +1,4 @@
 Plug 'Galooshi/vim-import-js'
-Plug 'neomake/neomake'
 Plug 'Valloric/MatchTagAlways'
 Plug 'SirVer/ultisnips'
 Plug 'epilande/vim-es2015-snippets'

@@ -71,31 +71,6 @@ let g:mta_filetypes = {
     \ 'javascript.jsx' : 1,
     \}
 
-" Neoformat setttings -------------------------------------------------
-let g:neoformat_only_msg_on_error   = 1
-let g:neoformat_javascript_prettier = {
-  \ 'exe': 'prettier',
-  \ 'args': ['--stdin', '--print-width 80', '--single-quote', '--trailing-comma es5'],
-  \ 'stdin': 1,
-  \ }
-
-nnoremap <leader>p :!prettier %<CR>
-
-augroup PrettierJs
-  autocmd!
-  autocmd BufWritePre *.js,*.jsx,*.rs Neoformat
-augroup END
-
-" Neomake settings ----------------------------------------------------
-let g:neomake_elixir_enabled_makers     = ['credo']
-let g:neomake_haml_enabled_makers       = ['hamllint']
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_ruby_enabled_makers       = ['rubocop']
-
-augroup NeoMake
-  autocmd BufWritePost * Neomake
-augroup END
-
 " Run Rubocop
 nnoremap <leader>ru :! rubocop -a % <cr>
 
