@@ -7,10 +7,10 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" Always show line numbers
+" Show line numbers
 set nu
 
-" Support project-specific .vimrc.local's
+" Support project-specific .vimrc.local file
 set secure
 set exrc
 
@@ -87,3 +87,21 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden -l -g ""'
 nnoremap <silent> <C-b> :Buffers<CR>
 nnoremap <silent> <C-g>g :Ag<CR>
 nnoremap <silent> <C-p> :Files<CR>
+
+" vim-go mappings
+augroup go_lang
+  " Run tests
+  autocmd FileType go nnoremap <leader>gt :GoTest<cr>
+
+  " Run test under cursor
+  autocmd FileType go nnoremap <leader>gtf :GoTestFunc<cr>
+
+  " Run linter
+  autocmd FileType go nnoremap <leader>gl :GoLint<cr>
+
+  " Load documentation for word under cursor
+  autocmd FileType go nnoremap <leader>gd :GoDoc<cr>
+
+  " Run program
+  autocmd FileType go nnoremap <leader>gr :GoRun<cr>
+augroup END
