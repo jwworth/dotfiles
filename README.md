@@ -4,8 +4,8 @@
 > perfect his work must first sharpen his tools. —Confucius
 
 These are my local dotfiles for configuring an OSX machine to my personal
-preferences. They are meant to supplement or override the excellent settings
-found in the [Hashrocket Dotmatrix](https://github.com/hashrocket/dotmatrix).
+preferences. They supplement the excellent settings found in the [Hashrocket
+Dotmatrix](https://github.com/hashrocket/dotmatrix).
 
 ### Installation
 
