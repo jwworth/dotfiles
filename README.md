@@ -10,22 +10,14 @@ Dotmatrix](https://github.com/hashrocket/dotmatrix).
 ### Installation
 
 ```
-$ cd code_directory
+$ cd <code_directory>
 $ git clone https://github.com/jwworth/dotfiles.git
 ```
 
 Next, create a symlink for each file from the root directory:
 
 ```
-$ ln -s  ~/code_directory/dotfiles/.example.local ~/
-```
-
-Then, install dependencies:
-
-```
-$ gem install rubocop
-$ yarn add -g hamllint
-$ yarn add -g eslint
+$ ln -s  ~/<code_directory>/dotfiles/.<some_dotfile>.local ~/
 ```
 
 ### License
