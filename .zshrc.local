@@ -77,3 +77,6 @@ eval "$(/Users/jwworth/hashrocket/dotmatrix/hr/bin/hr init -)"
 
 # Lock my screen
 alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+
+# Run all go tests in a directory
+alias gt='go test ./...'
