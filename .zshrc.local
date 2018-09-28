@@ -80,3 +80,6 @@ alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/
 
 # Run all go tests in a directory
 alias gt='go test ./...'
+
+# Update my brew
+alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
