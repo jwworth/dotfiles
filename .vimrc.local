@@ -41,13 +41,10 @@ nnoremap <leader><c-u> viwU
 " Abbreviate my email
 iabbrev @@ jake@jakeworth.com
 
-" Always check spelling and turn off numbers in markdown files
+" Prepare text files for book-style reading
 augroup spellcheck_documentation
-  autocmd BufNewFile,BufRead *.md setlocal spell
-  autocmd BufNewFile,BufRead *.rdoc setlocal spell
-
-  autocmd BufNewFile,BufRead *.md setlocal nonu
-  autocmd BufNewFile,BufRead *.rdoc setlocal nonu
+  autocmd BufNewFile,BufRead *.md,*.rdoc,*.txt  setlocal spell
+  autocmd BufNewFile,BufRead *.md,*.rdoc,*.txt  setlocal nonu
 augroup END
 
 " Dillon and Jake Sort™
