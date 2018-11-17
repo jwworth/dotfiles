@@ -102,3 +102,6 @@ augroup go_lang
   " Run program
   autocmd FileType go nnoremap <leader>gr :GoRun<cr>
 augroup END
+
+" Let mdx files be treated as markdown
+autocmd BufEnter *.mdx set ft=markdown
