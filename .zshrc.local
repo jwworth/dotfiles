@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Initialize autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
@@ -18,11 +20,11 @@ alias dotfiles='cd ~/oss/dotfiles'
 # Jump to my OSS directory
 alias oss='cd ~/oss'
 
+# Jump to my products directory
+alias products='cd ~/products'
+
 # Jump to my blog directory
 alias blog='cd ~/Dropbox/blog'
-
-# New blow post
-alias nblog='function _blog(){ vim "Dropbox/blog/$1.md";};_blog'
 
 # Install Rubygems quickly
 alias bi='bundle install -j 8'
@@ -42,12 +44,17 @@ alias mds='mix deploy staging'
 # Deploy an Elixir application to production
 alias mdp='mix deploy production'
 
-# Download an Exercism Go exercise, run tests, open Vim
-function exergo() {
-  exercism download --exercise=$1 --track=go
-  cd ~/Exercism/go/$1
-  go test
-  vim -o *.go
+# Download an Exercism exercise and change to directory
+function exercize() {
+  cd ~/Exercism || exit
+  exercism download --exercise="$1" --track="$2"
+  cd ~/Exercism/"$2"/"$1" || exit
+}
+
+# Submit an Exercism exercise
+function exersmit() {
+  cd ~/Exercism || exit
+  exercism submit ~/Exercism/"$1"/"$2"
 }
 
 # Fast-forward my branch to master's HEAD
@@ -64,13 +71,15 @@ function timer () {
   while true
   do
     afplay /System/Library/Sounds/Ping.aiff
-    sleep $1
+    sleep "$1"
   done
 }
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Start an hour timer
+alias hour='open https://duckduckgo.com/?q=1+hour+timer&ia=answer'
+
+# Open my standup
+alias standup='open https://zoom.us/j/4044044321'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(/Users/jwworth/hashrocket/dotmatrix/hr/bin/hr init -)"
@@ -83,3 +92,20 @@ alias gt='go test ./...'
 
 # Update my brew
 alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
+
+# Open the hostfile
+alias eetc='sudo vim /etc/hosts'
+
+# Flush my DNS cache
+alias cflush='sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder && say cache flushed'
+
+# Alias my JS package manager
+alias y='yarn'
+
+export PATH="/usr/local/opt/libarchive/bin:$PATH"
+
+# Enable Erlang history (OTP 20+)
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
