@@ -29,8 +29,8 @@ alias blog='cd ~/Dropbox/blog'
 # Install Rubygems quickly
 alias bi='bundle install -j 8'
 
-# Open Tmux in my side project
-alias qm='mux quartermaster'
+# WIP commit
+alias gwip='git commit -m WIP && git push'
 
 # Find commands I type often
 alias typeless='history n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | tail -n 100'
