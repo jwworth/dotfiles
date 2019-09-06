@@ -20,6 +20,12 @@ Next, create a symlink for each file from the root directory:
 $ ln -s  ~/<code_directory>/dotfiles/.<some_dotfile>.local ~/
 ```
 
+To set up a new Mac, run:
+
+```
+$ ./.macos
+```
+
 ### License
 
 These dotfiles are released under the [MIT
