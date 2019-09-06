@@ -46,9 +46,9 @@ alias mdp='mix deploy production'
 
 # Download an Exercism exercise and change to directory
 function exercize() {
-  cd ~/Exercism || exit
+  cd ~/Exercism || return
   exercism download --exercise="$1" --track="$2"
-  cd ~/Exercism/"$2"/"$1" || exit
+  cd ~/Exercism/"$2"/"$1" || return
 }
 
 # Submit an Exercism exercise
