@@ -9,30 +9,28 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # ALIASES
 
 # Shorthands for my favorite editor
-alias v='vim' alias vi='vim'
+alias v='vim'
+alias vi='vim'
 
-# Opens this file
+# Opens this file for easy editing
 alias aliases='vim ~/oss/dotfiles/.zshrc.local'
 
 # Jump to my dotfiles
 alias dotfiles='cd ~/oss/dotfiles'
 
-# Jump to my OSS directory
+# Jump to my OSS projects
 alias oss='cd ~/oss'
-
-# Jump to my products directory
-alias products='cd ~/products'
 
 # Jump to my blog directory
 alias blog='cd ~/Dropbox/blog'
 
-# Install Rubygems quickly
+# Install Rubygems in parallel
 alias bi='bundle install -j 8'
 
-# WIP commit
+# Hasty WIP commit on a branch
 alias gwip='git commit -m WIP && git push'
 
-# Find commands I type often
+# Find commands I type often so I can alias them
 alias typeless='history n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | tail -n 100'
 
 # Run Elixir tests
@@ -44,7 +42,7 @@ alias mds='mix deploy staging'
 # Deploy an Elixir application to production
 alias mdp='mix deploy production'
 
-# Download an Exercism exercise and change to directory
+# Download an Exercism exercise and change to the exercise directory
 function exercize() {
   cd ~/Exercism || return
   exercism download --exercise="$1" --track="$2"
@@ -60,13 +58,13 @@ function exersmit() {
 # Fast-forward my branch to master's HEAD
 alias gmr='git checkout master && git pull --rebase && git checkout - && git rebase master'
 
-# Interactively rebase a feature branch off the fork from master
+# Interactively rebase a feature branch off the divergence from master
 alias grim='git rebase -i master'
 
-# Fast-forward my branch and open an interactive rebase
+# Fast-forward my branch and open an interactive Git rebase
 alias mgrim='gmr && grim'
 
-# Make a 'beep' sound every <n> seconds
+# Make a 'beep' sound every n seconds
 function timer () {
   while true
   do
@@ -78,16 +76,10 @@ function timer () {
 # Start an hour timer
 alias hour='open https://duckduckgo.com/?q=1+hour+timer&ia=answer'
 
-# Open my standup
-alias standup='open https://zoom.us/j/4044044321'
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(/Users/jwworth/hashrocket/dotmatrix/hr/bin/hr init -)"
-
-# Lock my screen
+# Lock my computer's screen
 alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
-# Run all go tests in a directory
+# Run all Go tests in a directory
 alias gt='go test ./...'
 
 # Update my brew
@@ -99,13 +91,19 @@ alias eetc='sudo vim /etc/hosts'
 # Flush my DNS cache
 alias cflush='sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder && say cache flushed'
 
-# Alias my JS package manager
+# Alias my JS package manager of choice
 alias y='yarn'
-
-export PATH="/usr/local/opt/libarchive/bin:$PATH"
 
 # Enable Erlang history (OTP 20+)
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-# Add Visual Studio Code (code)
+# Add Visual Studio Code to my path as `code`
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Set up fuzzy finding
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Install the latest and greatest from Hashrocket
+eval "$(/Users/jwworth/hashrocket/dotmatrix/hr/bin/hr init -)"
+
+export PATH="/usr/local/opt/libarchive/bin:$PATH"
