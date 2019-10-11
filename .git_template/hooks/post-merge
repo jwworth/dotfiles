@@ -1,0 +1,3 @@
+#!/bin/sh
+
+"$HOME"/.git_template/hooks/ctags >/dev/null 2>&1 &
