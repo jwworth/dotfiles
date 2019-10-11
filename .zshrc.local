@@ -65,7 +65,7 @@ alias grim='git rebase -i master'
 alias mgrim='gmr && grim'
 
 # Make a 'beep' sound every n seconds
-function timer () {
+function beeps () {
   while true
   do
     afplay /System/Library/Sounds/Ping.aiff
@@ -74,7 +74,7 @@ function timer () {
 }
 
 # Start an hour timer
-alias hour='open https://duckduckgo.com/?q=1+hour+timer&ia=answer'
+alias hourt='open https://duckduckgo.com/?q=1+hour+timer&ia=answer'
 
 # Lock my computer's screen
 alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
