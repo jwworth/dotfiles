@@ -50,6 +50,9 @@ augroup END
 " Dillon and Jake Sort™
 vnoremap <F5> :sort<CR>
 
+" Vidal and Dorian Sort™
+vnoremap <silent> gs :sort<cr>
+
 " Use a color scheme I like
 color railscasts
 
