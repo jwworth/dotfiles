@@ -14,10 +14,10 @@ $ cd <code_directory>
 $ git clone https://github.com/jwworth/dotfiles.git
 ```
 
-Next, create a symlink for each file from the root directory:
+Next, run the setup script:
 
 ```
-$ ln -s  ~/<code_directory>/dotfiles/.<some_dotfile>.local ~/
+$ bin/setup
 ```
 
 To set up a new Mac, run:
