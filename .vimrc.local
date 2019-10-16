@@ -42,9 +42,9 @@ nnoremap <leader><c-u> viwU
 iabbrev @@ jake@jakeworth.com
 
 " Prepare text files for book-style reading
-augroup spellcheck_documentation
-  autocmd BufNewFile,BufRead *.md,*.rdoc,*.txt  setlocal spell
-  autocmd BufNewFile,BufRead *.md,*.rdoc,*.txt  setlocal nonu
+augroup docs
+  autocmd BufNewFile,BufRead *.md,*.rdoc,*.txt setlocal spell
+  autocmd BufNewFile,BufRead *.md,*.rdoc,*.txt setlocal nonu
 augroup END
 
 " Dillon and Jake Sort™
