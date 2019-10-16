@@ -108,3 +108,6 @@ augroup END
 
 " Let mdx files be treated as markdown
 autocmd BufEnter *.mdx set ft=markdown
+
+" Steve Losh made me do this
+autocmd VimEnter * :echo ">^.^<"
