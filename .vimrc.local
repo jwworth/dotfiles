@@ -1,4 +1,7 @@
-" SETTINGS
+" Settings ---------------------- {{{
+" Start with all folds folded
+set foldlevelstart=0
+
 " Show line numbers
 set nu
 
@@ -34,8 +37,9 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 let g:mix_format_on_save = 1
 let g:mix_format_options = '--check-equivalent'
 let g:mix_format_silent_errors = 1
+" }}}
 
-" MAPPINGS
+" Mappings ---------------------- {{{
 " Use better escape
 inoremap jk <esc>
 
@@ -83,16 +87,22 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden -l -g ""'
 nnoremap <silent> <C-b> :Buffers<CR>
 nnoremap <silent> <C-g>g :Ag<CR>
 nnoremap <silent> <C-p> :Files<CR>
+" }}}
 
-" ABBREVIATIONS
+" Abbreviations ---------------------- {{{
 " Abbreviate my email
 iabbrev @@ jake@jakeworth.com
-" Allow Vim to overwrite the original crontab
-au FileType crontab setlocal bkc=yes
+" }}}
 
-" AUTOCOMMANDS
-" vim-go mappings
-augroup go_lang
+" Filetype settings ---------------------- {{{
+augroup filetype_crontab
+  autocmd!
+
+  "Allow Vim to overwrite the crontab
+  autocmd FileType crontab setlocal bkc=yes
+augroup END
+
+augroup filetype_go
   autocmd!
   " Run tests
   autocmd FileType go nnoremap <leader>gt :GoTest<cr>
@@ -110,22 +120,7 @@ augroup go_lang
   autocmd FileType go nnoremap <leader>gr :GoRun<cr>
 augroup END
 
-augroup mdx
-  autocmd!
-
-  " Let mdx files be treated as markdown
-  autocmd BufEnter *.mdx set ft=markdown
-augroup END
-
-augroup vim
-  autocmd!
-
-  " Print a cat when Vim opens
-  autocmd VimEnter * :echo ">^.^<"
-augroup END
-
-" Prepare text files for book-style reading
-augroup docs
+augroup filetype_docs
   autocmd!
 
   " Turn on spelling
@@ -135,3 +130,12 @@ augroup docs
   autocmd BufNewFile,BufRead *.md,*.rdoc,*.txt setlocal nonu
 augroup END
 
+augroup filetype_vim
+  autocmd!
+  " Fold this file on markers
+  autocmd FileType vim setlocal foldmethod=marker
+
+  " Print a cat when Vim opens
+  autocmd VimEnter * :echo ">^.^<"
+augroup END
+" }}}
