@@ -10,7 +10,8 @@ Dotmatrix](https://github.com/hashrocket/dotmatrix).
 ### Installation
 
 ```
-$ cd <code_directory>
+$ mkdir ~/oss
+$ cd ~/oss
 $ git clone https://github.com/jwworth/dotfiles.git
 ```
 
