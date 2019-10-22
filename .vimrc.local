@@ -138,4 +138,10 @@ augroup filetype_vim
   " Print a cat when Vim opens
   autocmd VimEnter * :echo ">^.^<"
 augroup END
+
+augroup filetype_haml
+  autocmd!
+  " Line up HAML linebreak pipes
+  autocmd FileType haml vnoremap <silent> ta :Tabularize /\|<CR>
+augroup END
 " }}}
