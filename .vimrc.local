@@ -51,10 +51,10 @@ noremap <left> <nop>
 noremap <right> <nop>
 
 " Substitute a highlighted word (h/t Vidal)
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+vnoremap <c-r> "hy:%s/<c-r>h//gc<left><left><left>
 
 " Enable quick help lookup
-nnoremap <F1> :help <C-r><C-w><CR>
+nnoremap <f1> :help <c-r><c-w><cr>
 
 " Open vimrc.local
 nnoremap <leader>ev :vsplit $MYVIMRC.local<cr>
@@ -69,7 +69,7 @@ inoremap <leader><c-u> <esc>vbU
 nnoremap <leader><c-u> viwU
 
 " Dillon and Jake Sort™
-vnoremap <F5> :sort<CR>
+vnoremap <f5> :sort<cr>
 
 " Vidal and Dorian Sort™
 vnoremap <silent> gs :sort<cr>
@@ -84,9 +84,9 @@ nnoremap _ ddkP
 nnoremap - ddp
 
 let $FZF_DEFAULT_COMMAND = 'ag --hidden -l -g ""'
-nnoremap <silent> <C-b> :Buffers<CR>
-nnoremap <silent> <C-g>g :Ag<CR>
-nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <c-b> :Buffers<cr>
+nnoremap <silent> <c-g>g :Ag<cr>
+nnoremap <silent> <c-p> :Files<cr>
 " }}}
 
 " Abbreviations ---------------------- {{{
@@ -142,6 +142,6 @@ augroup END
 augroup filetype_haml
   autocmd!
   " Line up HAML linebreak pipes
-  autocmd FileType haml vnoremap <silent> ta :Tabularize /\|<CR>
+  autocmd FileType haml vnoremap <silent> ta :Tabularize /\|<cr>
 augroup END
 " }}}
