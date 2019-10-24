@@ -89,7 +89,7 @@ nnoremap <silent> <c-g>g :Ag<cr>
 nnoremap <silent> <c-p> :Files<cr>
 
 " Yank file and line number under cursor
-nnoremap yfl :let @" = join([expand('%'),  line(".")], ':')<cr>
+nnoremap <silent> yfl :let @" = join([expand('%'),  line(".")], ':')<cr>
 " }}}
 
 " Abbreviations ---------------------- {{{
