@@ -87,6 +87,9 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden -l -g ""'
 nnoremap <silent> <c-b> :Buffers<cr>
 nnoremap <silent> <c-g>g :Ag<cr>
 nnoremap <silent> <c-p> :Files<cr>
+
+" Yank file and line number under cursor
+nnoremap yfl :let @" = join([expand('%'),  line(".")], ':')<cr>
 " }}}
 
 " Abbreviations ---------------------- {{{
