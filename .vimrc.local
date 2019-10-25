@@ -42,6 +42,7 @@ let g:mix_format_silent_errors = 1
 " Mappings ---------------------- {{{
 " Use better escape
 inoremap jk <esc>
+inoremap kj <esc>
 
 " Disable keys with better Vim mappings
 inoremap <esc> <nop>
