@@ -3,11 +3,14 @@
 # Initialize autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
+# Path exports
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
 
-# ALIASES
+# Add Visual Studio Code to my path as `code`
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+# Aliases
 # Shorthands for my favorite editor
 alias v='vim'
 alias vi='vim'
@@ -24,36 +27,8 @@ alias oss='cd ~/oss'
 # Jump to my blog directory
 alias blog='cd ~/Dropbox/blog'
 
-# Install Rubygems in parallel
-alias bi='bundle install -j 8'
-
-# Hasty WIP commit on a branch
-alias gwip='git commit -m WIP && git push'
-
 # Find commands I type often so I can alias them
 alias typeless='history n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | tail -n 100'
-
-# Run Elixir tests
-alias mt='mix test'
-
-# Deploy an Elixir application to staging
-alias mds='mix deploy staging'
-
-# Deploy an Elixir application to production
-alias mdp='mix deploy production'
-
-# Download an Exercism exercise and change to the exercise directory
-function exercize() {
-  cd ~/Exercism || return
-  exercism download --exercise="$1" --track="$2"
-  cd ~/Exercism/"$2"/"$1" || return
-}
-
-# Submit an Exercism exercise
-function exersmit() {
-  cd ~/Exercism || exit
-  exercism submit ~/Exercism/"$1"/"$2"
-}
 
 # Fast-forward my branch to master's HEAD
 alias gmr='git checkout master && git pull --rebase && git checkout - && git rebase master'
@@ -63,15 +38,6 @@ alias grim='git rebase -i master'
 
 # Fast-forward my branch and open an interactive Git rebase
 alias mgrim='gmr && grim'
-
-# Make a 'beep' sound every n seconds
-function beeps () {
-  while true
-  do
-    afplay /System/Library/Sounds/Ping.aiff
-    sleep "$1"
-  done
-}
 
 # Start an hour timer
 alias hourt='open https://duckduckgo.com/?q=1+hour+timer&ia=answer'
@@ -94,16 +60,34 @@ alias cflush='sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder &&
 # Alias my JS package manager of choice
 alias y='yarn'
 
+# Functions
+# Download an Exercism exercise and change to the exercise directory
+function exercize() {
+  cd ~/Exercism || return
+  exercism download --exercise="$1" --track="$2"
+  cd ~/Exercism/"$2"/"$1" || return
+}
+
+# Submit an Exercism exercise
+function exersmit() {
+  cd ~/Exercism || exit
+  exercism submit ~/Exercism/"$1"/"$2"
+}
+
+# Make a 'beep' sound every n seconds
+function beeps () {
+  while true
+  do
+    afplay /System/Library/Sounds/Ping.aiff
+    sleep "$1"
+  done
+}
+
 # Enable Erlang history (OTP 20+)
 export ERL_AFLAGS="-kernel shell_history enabled"
-
-# Add Visual Studio Code to my path as `code`
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Set up fuzzy finding
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Install the latest and greatest from Hashrocket
 eval "$(/Users/jwworth/hashrocket/dotmatrix/hr/bin/hr init -)"
-
-export PATH="/usr/local/opt/libarchive/bin:$PATH"
