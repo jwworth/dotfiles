@@ -92,5 +92,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # Set up fuzzy finding
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Install the latest and greatest from Hashrocket
-eval "$(/Users/jwworth/hashrocket/dotmatrix/hr/bin/hr init -)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
