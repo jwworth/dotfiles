@@ -60,6 +60,9 @@ alias cflush='sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder &&
 # Alias my JS package manager of choice
 alias y='yarn'
 
+# Alias Elixir mix commands
+alias xdg='mix deps.get'
+
 # Functions
 # Download an Exercism exercise and change to the exercise directory
 function exercize() {
