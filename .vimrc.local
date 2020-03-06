@@ -54,6 +54,9 @@ inoremap jk <esc>
 " Substitute a highlighted word (h/t Vidal)
 vnoremap <c-r> "hy:%s/<c-r>h//gc<left><left><left>
 
+" Search for word under cursor. Requires RipGrep or similar
+nnoremap <leader>g :<C-U>execute "Rg ".expand('<cword>') \| cw<CR>
+
 " Enable quick help lookup
 nnoremap <f1> :help <c-r><c-w><cr>
 
