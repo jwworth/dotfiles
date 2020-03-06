@@ -146,7 +146,7 @@ augroup filetype_vim
   autocmd FileType vim setlocal foldmethod=marker
 
   " Print a cat when Vim opens
-  autocmd VimEnter * :echo ">^.^<"
+  autocmd VimEnter * :echo "\"Don't let your dreams be dreams.\" --Shia LaBeouf"
 augroup END
 
 augroup filetype_haml
