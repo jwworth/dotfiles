@@ -64,6 +64,12 @@ alias y='yarn'
 alias xdg='mix deps.get'
 
 # Functions
+# Run all of the tests that have changed on my current branch (Ruby).
+# Usage: `$ changespec master`
+function changespec () {
+  git diff $@ --diff-filter=d --name-only *spec.rb | xargs rspec
+}
+
 # Download an Exercism exercise and change to the exercise directory
 function exercize() {
   cd ~/Exercism || return
