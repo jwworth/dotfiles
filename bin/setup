@@ -3,6 +3,7 @@
 # Symlink dotfiles
 ln -s "$HOME"/oss/dotfiles/.*.local "$HOME"/
 
-# Enable Git hooks
+# Enable Git settings
 ln -s "$HOME"/oss/dotfiles/.git_template "$HOME"/
 git config --global init.templatedir "$HOME"/.git_template
+git config --global commit.template "~/.git_commit_template.local"
