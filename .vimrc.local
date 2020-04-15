@@ -15,8 +15,11 @@ set ignorecase
 " Ignore case when using lowercase letters only
 set smartcase
 
-" Use a color scheme I like
-color railscasts
+" Disable dracula's italics
+let g:dracula_italic = 0
+
+" Use dracula colorscheme
+color dracula
 
 " Allow Vim-JSX to highlight *.js files
 let g:jsx_ext_required = 0
