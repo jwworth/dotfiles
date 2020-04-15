@@ -63,6 +63,9 @@ alias y='yarn'
 # Alias Elixir mix commands
 alias xdg='mix deps.get'
 
+# Clear Tmux History
+alias tc='clear; tmux clear-history; clear'
+
 # Functions
 # Run all of the tests that have changed on my current branch (Ruby).
 # Usage: `$ changespec master`
