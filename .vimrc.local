@@ -93,6 +93,12 @@ nnoremap _ ddkP
 " Move the current line down the file
 nnoremap - ddp
 
+" Insert a UUID with Ruby
+nnoremap ruid :read !ruby -e "require 'securerandom'; p SecureRandom.uuid"<cr>
+
+" Insert a UUID with JS
+nnoremap juid :read !node -e "var uuid = require('uuid'); console.log(uuid.v4())"<cr>
+
 let $FZF_DEFAULT_COMMAND = 'ag --hidden -l -g ""'
 nnoremap <silent> <c-b> :Buffers<cr>
 nnoremap <silent> <c-g>g :Ag<cr>
