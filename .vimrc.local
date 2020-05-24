@@ -15,13 +15,11 @@ set ignorecase
 " Ignore case when using lowercase letters only
 set smartcase
 
-" Disable dracula's italics
-let g:dracula_italic = 0
-
-" Use dracula colorscheme
-color dracula
+" Use railscasts colorscheme
+color railscasts
 
 " Allow Vim-JSX to highlight *.js files
+
 let g:jsx_ext_required = 0
 
 " Allow MatchTagAlways to highlight JSX
