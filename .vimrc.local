@@ -155,8 +155,8 @@ augroup filetype_vim
   " Fold this file on markers
   autocmd FileType vim setlocal foldmethod=marker
 
-  " Print a cat when Vim opens
-  autocmd VimEnter * :echo "\"Don't let your dreams be dreams.\" --Shia LaBeouf"
+  " Print a quote when Vim opens
+  autocmd VimEnter * :echo "\"Don’t look for the next opportunity. The one you have in hand is the opportunity.\" –Paul Adren"
 augroup END
 
 augroup filetype_haml
