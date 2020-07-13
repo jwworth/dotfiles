@@ -91,9 +91,6 @@ nnoremap <leader>ru :! rubocop -a % <cr>
 " Move the current line up the file
 nnoremap _ ddkP
 
-" Move the current line down the file
-nnoremap - ddp
-
 " Insert a UUID with Ruby
 nnoremap ruid :read !ruby -e "require 'securerandom'; p SecureRandom.uuid"<cr>
 
