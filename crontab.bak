@@ -1,0 +1,2 @@
+# Open my learning tool every workday at noon
+0 12 * * 1-7  open /Applications/Anki.app
