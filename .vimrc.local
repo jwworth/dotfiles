@@ -158,4 +158,7 @@ augroup filetype_haml
   " Line up HAML linebreak pipes
   autocmd FileType haml vnoremap <silent> ta :Tabularize /\|<cr>
 augroup END
+
+" Autoformat Rust files on save
+let g:rustfmt_autosave = 1
 " }}}
