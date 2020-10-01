@@ -10,24 +10,25 @@
 " Start with all folds folded
 set foldlevelstart=0
 
+" START: Duped from hashrocket/dotmatrix
 " Show line numbers
-set nu
-
-" Support project-specific .vimrc.local file
-set secure
-set exrc
+set number
 
 " Ignore case of normal letters
 set ignorecase
 
 " Ignore case when using lowercase letters only
 set smartcase
+" END: Duped from hashrocket/dotmatrix
+
+" Support project-specific .vimrc.local file
+set secure
+set exrc
 
 " Use railscasts colorscheme
 color railscasts
 
 " Allow Vim-JSX to highlight *.js files
-
 let g:jsx_ext_required = 0
 
 " Allow MatchTagAlways to highlight JSX
