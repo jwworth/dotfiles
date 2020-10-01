@@ -146,15 +146,19 @@ augroup filetype_vim
   autocmd!
   " Fold this file on markers
   autocmd FileType vim setlocal foldmethod=marker
-
-  " Print a quote when Vim opens
-  autocmd VimEnter * :echo "\"Don’t look for the next opportunity. The one you have in hand is the opportunity.\" –Paul Adren"
 augroup END
 
 augroup filetype_haml
   autocmd!
   " Line up HAML linebreak pipes
   autocmd FileType haml vnoremap <silent> ta :Tabularize /\|<cr>
+augroup END
+
+augroup filetype_all
+  autocmd!
+
+  " Print a quote when Vim opens
+  autocmd VimEnter * :echo "\"Don’t look for the next opportunity. The one you have in hand is the opportunity.\" –Paul Adren"
 augroup END
 
 " Autoformat Rust files on save
