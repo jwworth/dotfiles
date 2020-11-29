@@ -115,7 +115,8 @@ nnoremap <silent> yfl :let @" = join([expand('%'), line(".")], ':')<cr>
 " Show me the Vim highlight for word under a cursor (for writing Vim plugins)
 " https://jordanelver.co.uk/blog/2015/05/27/working-with-vim-colorschemes/
 nnoremap <leader>sp :call <SID>SynStack()<CR>
-function! <SID>SynStack()
+
+function! <SID>SynStack() abort
   if !exists("*synstack")
     return
   endif
