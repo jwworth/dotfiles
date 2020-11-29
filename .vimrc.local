@@ -133,7 +133,7 @@ endfunc
 augroup filetype_crontab
   autocmd!
 
-  "Allow Vim to overwrite the crontab
+  " Allow Vim to overwrite the crontab
   autocmd FileType crontab setlocal bkc=yes
 augroup END
 
