@@ -167,12 +167,14 @@ augroup END
 
 augroup filetype_vim
   autocmd!
+
   " Fold this file on markers
   autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
 augroup filetype_haml
   autocmd!
+
   " Line up HAML linebreak pipes
   autocmd FileType haml vnoremap <silent> ta :Tabularize /\|<cr>
 augroup END
