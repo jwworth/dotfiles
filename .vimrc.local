@@ -101,10 +101,7 @@ nnoremap <leader>ev :vsplit $MYVIMRC.local<cr>
 " Source vimrc.local
 nnoremap <leader>sv :source $MYVIMRC.local<cr>
 
-" Dillon and Jake Sort™
-vnoremap <f5> :sort<cr>
-
-" Vidal and Dorian Sort™
+" Vidal and Dorian Sort™. Sort the highlighted lines
 vnoremap <silent> gs :sort<cr>
 
 " Run Rubocop
