@@ -42,7 +42,7 @@ set splitright
 " Splits split below
 set splitbelow
 
-" Don't abandon hidden buffers (I need them)
+" Hides buffers instead of closing them
 set hidden
 
 " GUI settings (I don't use; duped from Hashrocket Dotmatrix)
