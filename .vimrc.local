@@ -132,11 +132,6 @@ function! <SID>SynStack()
 endfunc
 " }}}
 
-" Abbreviations ---------------------- {{{
-" Abbreviate my email
-iabbrev @@ jake@jakeworth.com
-" }}}
-
 " Filetype settings ---------------------- {{{
 augroup filetype_crontab
   autocmd!
