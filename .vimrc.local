@@ -141,7 +141,7 @@ augroup filetype_docs
   autocmd!
 
   " Turn off numbers and turn on spelling
-  autocmd BufNewFile,BufRead *.md,*.rdoc,*.txt setlocal nonumber spell
+  autocmd FileType markdown setlocal nonumber spell
 augroup END
 
 augroup filetype_vim
