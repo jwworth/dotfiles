@@ -89,9 +89,6 @@ nnoremap <c-r> :%s/<c-r><c-w>//gc<left><left><left>
 " Search for word under cursor with RipGrep
 nnoremap <leader>g :<C-U>execute "Rg ".expand('<cword>') \| cw<CR>
 
-" Enable quick Vim help lookup
-nnoremap <f1> :help <c-r><c-w><cr>
-
 " Remove ^M linebreaks
 nnoremap gsp :e ++ff=dos<cr>:w<cr>
 
