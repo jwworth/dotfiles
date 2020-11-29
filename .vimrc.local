@@ -104,12 +104,9 @@ vnoremap <silent> gs :sort<cr>
 " Insert a UUID with Ruby
 nnoremap ruid :read !ruby -e "require 'securerandom'; p SecureRandom.uuid"<cr>
 
-" Set a default search command for FZF
-let $FZF_DEFAULT_COMMAND = 'ag --hidden -l -g ""'
-
 " Map common FZF commmands
 nnoremap <silent> <c-b> :Buffers<cr>
-nnoremap <silent> <c-g>g :Ag<cr>
+nnoremap <silent> <c-g>g :Rg<cr>
 nnoremap <silent> <c-p> :Files<cr>
 
 " Yank file and line number under cursor (great for code reviews)
