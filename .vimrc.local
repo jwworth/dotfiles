@@ -137,24 +137,6 @@ augroup filetype_crontab
   autocmd FileType crontab setlocal bkc=yes
 augroup END
 
-augroup filetype_go
-  autocmd!
-  " Run tests
-  autocmd FileType go nnoremap <leader>gt :GoTest<cr>
-
-  " Run test under cursor
-  autocmd FileType go nnoremap <leader>gtf :GoTestFunc<cr>
-
-  " Run linter
-  autocmd FileType go nnoremap <leader>gl :GoLint<cr>
-
-  " Load documentation for word under cursor
-  autocmd FileType go nnoremap <leader>gd :GoDoc<cr>
-
-  " Run program
-  autocmd FileType go nnoremap <leader>gr :GoRun<cr>
-augroup END
-
 augroup filetype_docs
   autocmd!
 
