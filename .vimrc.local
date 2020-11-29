@@ -77,7 +77,7 @@ let g:mix_format_silent_errors = 1
 " }}}
 
 " Mappings ---------------------- {{{
-" Disable arrow keys (there are better versions in Vim)
+" Disable arrow keys (helped me learn Vim, and I do not use them)
 noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
