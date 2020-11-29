@@ -104,9 +104,6 @@ nnoremap <leader>sv :source $MYVIMRC.local<cr>
 " Vidal and Dorian Sort™. Sort the highlighted lines
 vnoremap <silent> gs :sort<cr>
 
-" Run Rubocop
-nnoremap <leader>ru :! rubocop -a % <cr>
-
 " Insert a UUID with Ruby
 nnoremap ruid :read !ruby -e "require 'securerandom'; p SecureRandom.uuid"<cr>
 
@@ -177,6 +174,11 @@ augroup filetype_haml
 
   " Line up HAML linebreak pipes
   autocmd FileType haml vnoremap <silent> ta :Tabularize /\|<cr>
+augroup END
+
+augroup filetype_ruby
+  " Run Rubocop
+  nnoremap <leader>ru :! rubocop -a % <cr>
 augroup END
 
 augroup filetype_all
