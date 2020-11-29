@@ -83,8 +83,8 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
-" Substitute a highlighted word (h/t Vidal Ekechukwu)
-vnoremap <c-r> "hy:%s/<c-r>h//gc<left><left><left>
+" Substitute the word under cursor (h/t u/abraxasknister)
+nnoremap <c-r> :%s/<c-r><c-w>//gc<left><left><left>
 
 " Search for word under cursor with RipGrep
 nnoremap <leader>g :<C-U>execute "Rg ".expand('<cword>') \| cw<CR>
