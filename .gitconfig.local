@@ -3,8 +3,6 @@
 [user]
   email = jake@jakeworth.com
   name = "Jake Worth"
-[ghi]
-  token = !security find-internet-password -a jwworth -s github.com -l 'ghi token' -w
 [init]
   templatedir = /Users/jwworth/.git_template
 [commit]
