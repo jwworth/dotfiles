@@ -104,6 +104,9 @@ vnoremap <silent> gs :sort<cr>
 " Insert a UUID with Ruby
 nnoremap ruid :read !ruby -e "require 'securerandom'; p SecureRandom.uuid"<cr>
 
+" Insert a date
+nnoremap date :put =strftime('%FT%T%z')<cr>
+
 " Map common FZF commmands
 nnoremap <silent> <c-b> :Buffers<cr>
 nnoremap <silent> <c-g>g :Rg<cr>
