@@ -168,3 +168,19 @@ augroup filetype_all
   autocmd VimEnter * :echo "\"Real artists ship.\" –Steve Jobs"
 augroup END
 " }}}
+
+" Plug ---------------------- {{{
+call plug#begin('~/.vim/plugged')
+
+Plug 'Valloric/MatchTagAlways'
+Plug 'dkarter/bullets.vim'
+Plug 'epilande/vim-es2015-snippets'
+Plug 'epilande/vim-react-snippets'
+Plug 'flazz/vim-colorschemes'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'ap/vim-css-color'
+
+call plug#end()
+" }}}
