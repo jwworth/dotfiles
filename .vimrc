@@ -6,6 +6,68 @@
 " Jake Worth's .vimrc
 "
 "
+" Plug ---------------------- {{{
+call plug#begin('~/.vim/plugged')
+
+Plug 'Valloric/MatchTagAlways'
+Plug 'ap/vim-css-color'
+Plug 'dkarter/bullets.vim'
+Plug 'epilande/vim-es2015-snippets'
+Plug 'epilande/vim-react-snippets'
+Plug 'flazz/vim-colorschemes'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'leafgarland/typescript-vim'
+
+" Hashrocket Dotmatrix plugs
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'adamlowe/vim-slurper'
+Plug 'godlygeek/tabular'
+Plug 'gregsexton/gitv'
+Plug 'hashrocket/vim-hashrocket'
+Plug 'jgdavey/tslime.vim'
+Plug 'jgdavey/vim-blockle'
+Plug 'jgdavey/vim-turbux'
+Plug 'jgdavey/vim-weefactor'
+Plug 'kana/vim-textobj-user'
+Plug 'leshill/vim-json'
+Plug 'mileszs/ack.vim'
+Plug 'mxw/vim-jsx'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'pangloss/vim-javascript'
+Plug 'rondale-sc/vim-spacejam'
+Plug 'slim-template/vim-slim'
+Plug 'therubymug/vim-pyte'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rsi'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vim-scripts/bufexplorer.zip'
+Plug 'vim-scripts/bufkill.vim'
+Plug 'w0rp/ale'
+
+call plug#end()
+" }}}
+"
 " Settings ---------------------- {{{
 " Turn on syntax highlighting
 syntax on
@@ -52,8 +114,8 @@ set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 " Use Bash as my shell
 set shell=bash
 
-" Use railscasts colorscheme; tried and true
-color railscasts
+" Set default colors
+colorscheme railscasts
 
 " Allow Vim-JSX to highlight *.js files
 let g:jsx_ext_required = 0
@@ -91,12 +153,6 @@ nnoremap <leader>g :<C-U>execute "Rg ".expand('<cword>') \| cw<CR>
 
 " Remove ^M linebreaks
 nnoremap gsp :e ++ff=dos<cr>:w<cr>
-
-" Open vimrc.local
-nnoremap <leader>ev :vsplit $MYVIMRC.local<cr>
-
-" Source vimrc.local
-nnoremap <leader>sv :source $MYVIMRC.local<cr>
 
 " Vidal and Dorian Sort™. Sort the highlighted lines
 vnoremap <silent> gs :sort<cr>

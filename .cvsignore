@@ -1,0 +1,6 @@
+*~
+.*.sw?
+.sw?
+.DS_Store
+/tags
+.tool-versions

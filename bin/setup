@@ -1,12 +1,9 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Symlink dotfiles
-ln -s "$HOME"/oss/dotfiles/.*.local "$HOME"/
+ln -s "$HOME"/oss/dotfiles/.* "$HOME"/
 
 # Enable Git settings
 ln -s "$HOME"/oss/dotfiles/.git_template "$HOME"/
 git config --global init.templatedir "$HOME"/.git_template
-git config --global commit.template "$HOME/.git_commit_template.local"
-
-# Setup crontab
-crontab crontab.bak
+git config --global commit.template "$HOME/.git_commit_template"

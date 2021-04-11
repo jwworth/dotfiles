@@ -1,11 +1,11 @@
 # dotfiles
 
-> The expectations of life depend upon diligence; the mechanic that would
-> perfect his work must first sharpen his tools. —Confucius
+> "The expectations of life depend upon diligence; the mechanic that would
+> perfect his work must first sharpen his tools." —Confucius
 
-These are my local dotfiles for configuring an OSX machine to my personal
-preferences. They supplement the excellent settings found in the [Hashrocket
-Dotmatrix](https://github.com/hashrocket/dotmatrix).
+These are my dotfiles for configuring an OSX machine to my personal
+preferences. They build on and borrow from the [Hashrocket
+Dotmatrix][dotmatrix].
 
 ### Installation
 
@@ -29,5 +29,7 @@ $ ./.macos
 
 ### License
 
-These dotfiles are released under the [MIT
-License](http://www.opensource.org/licenses/MIT).
+These dotfiles are released under the [MIT License][mit].
+
+[dotmatrix]: https://github.com/hashrocket/dotmatrix
+[mit]: http://www.opensource.org/licenses/MIT
