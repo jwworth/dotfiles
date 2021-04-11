@@ -1,20 +1,28 @@
 [alias]
-    b  = branch
-    st = status
-    cheddar = commit --amend -CHEAD
-    co = checkout
-    put = push origin HEAD
-    doff = reset HEAD^
-    reset-authors = commit --amend --reset-author -CHEAD
+	b  = branch
+	st = status
+	cheddar = commit --amend -CHEAD
+	co = checkout
+	put = push origin HEAD
+	doff = reset HEAD^
+	reset-authors = commit --amend --reset-author -CHEAD
 
 [user]
-    name = Jake Worth
-    email = jake@jakeworth.com
+	name = Jake Worth
+	email = jake@jakeworth.com
 
 [core]
-    excludesfile = ~/.cvsignore
-    editor = vim
-    whitespace = warn
+	excludesfile = ~/.cvsignore
+	editor = vim
+	whitespace = warn
 
 [interactive]
-    singlekey = true
+	singlekey = true
+[init]
+	templatedir = /Users/jakeworth/.git_template
+[commit]
+	template = /Users/jakeworth/.git_commit_template
+[github]
+	user = jwworth
+[init]
+	templatedir = /Users/jwworth/.git_template

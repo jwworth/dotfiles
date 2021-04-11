@@ -1,9 +1,0 @@
-[github]
-  user = jwworth
-[user]
-  email = jake@jakeworth.com
-  name = "Jake Worth"
-[init]
-  templatedir = /Users/jwworth/.git_template
-[commit]
-  template = ~/.git_commit_template.local

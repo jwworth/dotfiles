@@ -4,11 +4,14 @@
 # ln -s "$HOME"/oss/dotfiles/.*.local "$HOME"/
 
 # Enable Git settings
-# ln -s "$HOME"/oss/dotfiles/.git_template "$HOME"/
-# git config --global init.templatedir "$HOME"/.git_template
-# git config --global commit.template "$HOME/.git_commit_template.local"
+ln -s "$HOME"/oss/dotfiles/.git_template "$HOME"/
+git config --global init.templatedir "$HOME"/.git_template
+git config --global commit.template "$HOME/.git_commit_template"
 
 ln -s "$HOME"/oss/dotfiles/.gitconfig "$HOME"/
 ln -s "$HOME"/oss/dotfiles/.tmux.conf "$HOME"/
 ln -s "$HOME"/oss/dotfiles/.cvsignore "$HOME"/
 ln -s "$HOME"/oss/dotfiles/.zshrc "$HOME"/
+ln -s "$HOME"/oss/dotfiles/.vimrc "$HOME"/
+ln -s "$HOME"/oss/dotfiles/.git_template "$HOME"/
+ln -s "$HOME"/oss/dotfiles/.git_commit_template "$HOME"/
