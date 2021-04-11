@@ -7,6 +7,3 @@ ln -s "$HOME"/oss/dotfiles/.*.local "$HOME"/
 ln -s "$HOME"/oss/dotfiles/.git_template "$HOME"/
 git config --global init.templatedir "$HOME"/.git_template
 git config --global commit.template "$HOME/.git_commit_template.local"
-
-# Setup crontab
-crontab crontab.bak
