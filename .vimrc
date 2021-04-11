@@ -92,12 +92,6 @@ nnoremap <leader>g :<C-U>execute "Rg ".expand('<cword>') \| cw<CR>
 " Remove ^M linebreaks
 nnoremap gsp :e ++ff=dos<cr>:w<cr>
 
-" Open vimrc.local
-nnoremap <leader>ev :vsplit $MYVIMRC.local<cr>
-
-" Source vimrc.local
-nnoremap <leader>sv :source $MYVIMRC.local<cr>
-
 " Vidal and Dorian Sort™. Sort the highlighted lines
 vnoremap <silent> gs :sort<cr>
 
