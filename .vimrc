@@ -6,6 +6,22 @@
 " Jake Worth's .vimrc
 "
 "
+" Plug ---------------------- {{{
+call plug#begin('~/.vim/plugged')
+
+Plug 'Valloric/MatchTagAlways'
+Plug 'dkarter/bullets.vim'
+Plug 'epilande/vim-es2015-snippets'
+Plug 'epilande/vim-react-snippets'
+Plug 'flazz/vim-colorschemes'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'ap/vim-css-color'
+
+call plug#end()
+" }}}
+"
 " Settings ---------------------- {{{
 " Turn on syntax highlighting
 syntax on
@@ -52,8 +68,8 @@ set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 " Use Bash as my shell
 set shell=bash
 
-" Use railscasts colorscheme; tried and true
-color railscasts
+" Set default colors
+colorscheme railscasts
 
 " Allow Vim-JSX to highlight *.js files
 let g:jsx_ext_required = 0
@@ -161,20 +177,4 @@ augroup filetype_all
   " Print a quote when Vim opens
   autocmd VimEnter * :echo "\"Real artists ship.\" –Steve Jobs"
 augroup END
-" }}}
-
-" Plug ---------------------- {{{
-call plug#begin('~/.vim/plugged')
-
-Plug 'Valloric/MatchTagAlways'
-Plug 'dkarter/bullets.vim'
-Plug 'epilande/vim-es2015-snippets'
-Plug 'epilande/vim-react-snippets'
-Plug 'flazz/vim-colorschemes'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'ap/vim-css-color'
-
-call plug#end()
 " }}}
