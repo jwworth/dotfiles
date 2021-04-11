@@ -1,0 +1,20 @@
+[alias]
+    b  = branch
+    st = status
+    cheddar = commit --amend -CHEAD
+    co = checkout
+    put = push origin HEAD
+    doff = reset HEAD^
+    reset-authors = commit --amend --reset-author -CHEAD
+
+[user]
+    name = Jake Worth
+    email = jake@jakeworth.com
+
+[core]
+    excludesfile = ~/.cvsignore
+    editor = vim
+    whitespace = warn
+
+[interactive]
+    singlekey = true
