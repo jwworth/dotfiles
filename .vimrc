@@ -156,28 +156,24 @@ endfunc
 " Filetype settings ---------------------- {{{
 augroup filetype_crontab
   autocmd!
-
   " Allow Vim to overwrite the crontab
   autocmd FileType crontab setlocal bkc=yes
 augroup END
 
 augroup filetype_docs
   autocmd!
-
   " Turn off numbers and turn on spelling
   autocmd FileType markdown setlocal nonumber spell
 augroup END
 
 augroup filetype_vim
   autocmd!
-
   " Fold this file on markers
   autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
 augroup filetype_haml
   autocmd!
-
   " Line up HAML linebreak pipes
   autocmd FileType haml vnoremap <silent> ta :Tabularize /\|<cr>
 augroup END
