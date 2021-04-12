@@ -13,6 +13,28 @@ if $VIM_PLUGINS != 'NO'
 endif
 " }}}
 
+" ALE ---------------------- {{{
+let g:ale_sign_error = 'X'
+let g:ale_sign_warning = '!'
+highlight link ALEWarningSign ErrorMsg
+highlight link ALEErrorSign WarningMsg
+nnoremap <silent> <leader>ne :ALENextWrap<CR>
+nnoremap <silent> <leader>pe :ALEPreviousWrap<CR>
+
+let g:ale_fixers = {
+      \   'bash': ['shfmt'],
+      \   'elixir': ['mix_format'],
+      \   'javascript': ['prettier'],
+      \   'javascript.jsx': ['prettier'],
+      \   'json': ['prettier'],
+      \   'ruby': ['rubocop'],
+      \   'scss': ['prettier'],
+      \   'zsh': ['shfmt'],
+      \}
+
+let g:ale_fix_on_save = 1
+" }}}
+
 " Settings ---------------------- {{{
 " Turn on syntax highlighting
 syntax on
