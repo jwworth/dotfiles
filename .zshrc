@@ -19,9 +19,6 @@ PROMPT='${vcs_info_msg_0_}%# '
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
 
-# Add Visual Studio Code to my path as `code`
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
 # Shorthands for my favorite editor
 alias v='vim'
 alias vi='vim'
