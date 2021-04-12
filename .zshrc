@@ -36,14 +36,6 @@ alias grim='git rebase -i master'
 # Fast-forward my branch and open an interactive Git rebase
 alias mgrim='gmr && grim'
 
-# History ---------------------- {{{
-HISTFILE=~/.zsh_history
-HISTSIZE=5000
-SAVEHIST=10000
-setopt APPEND_HISTORY
-setopt INC_APPEND_HISTORY
-# }}}
-
 # Hashrocket aliases
 alias gap='git add -p'
 alias gb='git branch'
@@ -68,6 +60,14 @@ alias grc='git rebase --continue'
 alias grim='git rebase -i master'
 alias gst='git status'
 alias reset-authors='git commit --amend --reset-author -C HEAD'
+# }}}
+
+# History ---------------------- {{{
+HISTFILE=~/.zsh_history
+HISTSIZE=5000
+SAVEHIST=10000
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
 # }}}
 
 # Rails ---------------------- {{{
