@@ -74,7 +74,7 @@ set splitbelow
 " Hides buffers instead of closing them
 set hidden
 
-" GUI settings (I don't use; duped from Hashrocket Dotmatrix)
+" GUI settings
 set guifont=Monaco:h16
 set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 
