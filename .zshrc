@@ -99,9 +99,6 @@ alias eetc='sudo vim /etc/hosts'
 # Alias my JS package manager of choice
 alias y='yarn'
 
-# Alias Elixir mix commands
-alias xdg='mix deps.get'
-
 # Functions
 # Run all of the tests that have changed on my current branch (Ruby).
 # Usage: `$ changespec master`
