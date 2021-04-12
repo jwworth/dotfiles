@@ -1,8 +1,6 @@
--- Use a unique history file for every database
-\set HISTFILE ~/.psql_history-:DBNAME
-
--- Print nulls as something meaningful for reading
-\pset null 💀
-
--- Time everything
+\set QUIET 1
+\pset null 'ø'
+\x auto
+\set QUIET 0
 \timing
+\set HISTFILE ~/.psql_history-:DBNAME
