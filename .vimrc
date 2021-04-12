@@ -183,9 +183,13 @@ augroup filetype_ruby
   nnoremap <leader>ru :! rubocop -a % <cr>
 augroup END
 
+augroup vimrc
+  autocmd!
+  autocmd GuiEnter * set columns=120 lines=70 number
+augroup END
+
 augroup filetype_all
   autocmd!
-
   " Print a quote when Vim opens
   autocmd VimEnter * :echo "\"Real artists ship.\" –Steve Jobs"
 augroup END
