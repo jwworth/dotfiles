@@ -27,6 +27,14 @@ alias grim='git rebase -i master'
 # Fast-forward my branch and open an interactive Git rebase
 alias mgrim='gmr && grim'
 
+# History ---------------------- {{{
+HISTFILE=~/.zsh_history
+HISTSIZE=5000
+SAVEHIST=10000
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+# }}}
+
 # Hashrocket aliases
 alias gap='git add -p'
 alias gb='git branch'
