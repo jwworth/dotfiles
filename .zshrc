@@ -61,6 +61,14 @@ alias gst='git status'
 alias reset-authors='git commit --amend --reset-author -C HEAD'
 # }}}
 
+# Rails ---------------------- {{{
+# Hashrocket aliases
+alias be='bundle exec'
+alias groutes='rake routes | grep $@'
+alias sc='rails console'
+alias ss='rails server'
+# }}}
+
 # File management ---------------------- {{{
 # Hashrocket aliases
 alias ..='cd ..'
