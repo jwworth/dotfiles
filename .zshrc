@@ -1,5 +1,17 @@
 #!/bin/zsh
 
+# Set prompt
+autoload -Uz vcs_info
+autoload -U colors; colors
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '*'
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:git*' formats "%{$fg[yellow]%}%r/%S%{$fg[white]%} %{$fg[cyan]%}%b%{$reset_color%}%m%u%c%{$reset_color%} "
+precmd() { vcs_info }
+setopt prompt_subst
+PROMPT='${vcs_info_msg_0_}%# '
+
 # Initialize autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
