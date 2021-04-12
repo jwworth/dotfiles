@@ -112,6 +112,9 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
+" Shows the output from Prettier
+nnoremap <leader>pt :!prettier %<CR>
+
 " Substitute the word under cursor (h/t Vidal Ekechukwu)
 vnoremap <c-r> "hy:%s/<c-r>h//gc<left><left><left>
 
