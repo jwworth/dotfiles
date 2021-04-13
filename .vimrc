@@ -82,7 +82,7 @@ set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 set shell=bash
 
 " Set default colors
-colorscheme railscasts
+colorscheme PaperColor
 
 " Allow Vim-JSX to highlight *.js files
 let g:jsx_ext_required = 0

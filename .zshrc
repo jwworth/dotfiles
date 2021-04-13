@@ -1,6 +1,14 @@
 #!/bin/zsh
 
-# Set prompt
+
+# Color term
+export CLICOLOR=1
+export LSCOLORS=Dxfxcxdxbxegedabadacad
+export ZLS_COLORS=$LSCOLORS
+export LC_CTYPE=en_US.UTF-8
+export LESS=FRX
+
+# Prompt
 autoload -Uz vcs_info
 autoload -U colors; colors
 zstyle ':vcs_info:*' enable git
