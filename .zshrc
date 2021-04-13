@@ -1,14 +1,13 @@
 #!/bin/zsh
 
-
-# Color term
+# Color the terminal
 export CLICOLOR=1
 export LSCOLORS=Dxfxcxdxbxegedabadacad
 export ZLS_COLORS=$LSCOLORS
 export LC_CTYPE=en_US.UTF-8
 export LESS=FRX
 
-# Prompt
+# Style the prompt
 autoload -Uz vcs_info
 autoload -U colors; colors
 zstyle ':vcs_info:*' enable git
@@ -35,16 +34,6 @@ alias vi='vim'
 alias typeless='history n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | tail -n 100'
 
 # Git ---------------------- {{{
-# Fast-forward my branch to master's HEAD
-alias gmr='git checkout master && git pull --rebase && git checkout - && git rebase master'
-
-# Interactively rebase a feature branch off the divergence from master
-alias grim='git rebase -i master'
-
-# Fast-forward my branch and open an interactive Git rebase
-alias mgrim='gmr && grim'
-
-# Hashrocket aliases
 alias gap='git add -p'
 alias gb='git branch'
 alias gc='git commit -v'
@@ -58,6 +47,7 @@ alias gl='git pull'
 alias glg='git log --graph --oneline --decorate --color --all'
 alias glod='git log --oneline --decorate'
 alias glp='git log -p'
+alias gmr='git checkout master && git pull --rebase && git checkout - && git rebase master'
 alias gnap='git add -N --ignore-removal . && gap && gref'
 alias gp='git push'
 alias gplease='git push --force-with-lease'
@@ -67,6 +57,7 @@ alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias grim='git rebase -i master'
 alias gst='git status'
+alias mgrim='gmr && grim'
 alias reset-authors='git commit --amend --reset-author -C HEAD'
 # }}}
 
@@ -79,7 +70,6 @@ setopt INC_APPEND_HISTORY
 # }}}
 
 # Rails ---------------------- {{{
-# Hashrocket aliases
 alias be='bundle exec'
 alias groutes='rake routes | grep $@'
 alias sc='rails console'
@@ -87,22 +77,15 @@ alias ss='rails server'
 # }}}
 
 # File management ---------------------- {{{
-# Hashrocket aliases
 alias ..='cd ..'
 alias cd..='cd ..'
-alias l="ls -F -G -lah"
-alias la="ls -a"
+alias l='ls -F -G -lah'
+alias la='ls -a'
 alias ll='ls -l'
 alias lsd='ls -ld *(-/DN)'
 alias md='mkdir -p'
 alias rd='rmdir'
 # }}}
-
-# Update my brew
-alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
-
-# Open the hostfile
-alias eetc='sudo vim /etc/hosts'
 
 # Alias my JS package manager of choice
 alias y='yarn'
@@ -122,3 +105,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Configure ASDF
 . /usr/local/opt/asdf/asdf.sh
+
+# Prefer exhuberant ctags to default
+alias ctags=/usr/local/bin/ctags
