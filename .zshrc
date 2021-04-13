@@ -24,7 +24,7 @@ PROMPT='${vcs_info_msg_0_}%# '
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # Path exports
-# Add RVM to PATH for scripting
+# Add RVM to PATH
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # Shorthands for my favorite editor
