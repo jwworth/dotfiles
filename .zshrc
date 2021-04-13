@@ -119,3 +119,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Set up fuzzy finding
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Configure ASDF
+. /usr/local/opt/asdf/asdf.sh
