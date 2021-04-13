@@ -24,5 +24,3 @@
 	template = /Users/jakeworth/.git_commit_template
 [github]
 	user = jwworth
-[init]
-	templatedir = /Users/jwworth/.git_template
