@@ -1,5 +1,10 @@
 #!/bin/zsh
 
+# Set default apps
+export PAGER='less'
+export EDITOR='vim'
+export PSQL_EDITOR='vim -c"setf sql"'
+
 # Color the terminal
 export CLICOLOR=1
 export LSCOLORS=Dxfxcxdxbxegedabadacad
