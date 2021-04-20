@@ -19,6 +19,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-textobj-user'
+Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'leshill/vim-json'
 Plug 'mileszs/ack.vim'
