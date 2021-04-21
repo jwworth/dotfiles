@@ -15,10 +15,10 @@ $ cd ~/oss
 $ git clone https://github.com/jwworth/dotfiles.git
 ```
 
-Next, run the setup script:
+Next, run the install script:
 
 ```
-$ bin/setup
+$ bin/install
 ```
 
 To set up a new Mac, run:
