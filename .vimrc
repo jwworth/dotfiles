@@ -176,6 +176,15 @@ augroup filetype_haml
   autocmd!
   " Line up HAML linebreak pipes
   autocmd FileType haml vnoremap <silent> ta :Tabularize /\|<cr>
+
+  " Fold on indents
+  autocmd FileType haml setlocal foldmethod=indent
+augroup END
+
+augroup filetype_slim
+  autocmd!
+  " Fold on indents
+  autocmd FileType slim setlocal foldmethod=indent
 augroup END
 
 augroup filetype_ruby
