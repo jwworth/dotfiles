@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Enable emacs keybindings
+bindkey -e
+
 # Set default apps
 export PAGER='less'
 export EDITOR='vim'
