@@ -102,7 +102,7 @@ alias y='yarn'
 # Run all of the tests that have changed on my current branch (Ruby).
 # Usage: `$ changespec master`
 function changespec () {
-  git diff $@ --diff-filter=d --name-only *spec.rb | xargs rspec
+  git diff $@ --diff-filter=d --name-only '*spec.rb' | xargs rspec
 }
 
 # Enable Erlang history (OTP 20+)
