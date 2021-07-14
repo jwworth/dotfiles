@@ -51,9 +51,6 @@ set smartcase
 " Show line numbers
 set number
 
-" Start with all folds folded (like in this file)
-set foldlevelstart=0
-
 " Allow a separate .vimrc in any directory
 set secure
 set exrc
