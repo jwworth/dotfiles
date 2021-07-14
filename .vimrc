@@ -100,6 +100,10 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 let g:mix_format_on_save = 1
 let g:mix_format_options = '--check-equivalent'
 let g:mix_format_silent_errors = 1
+
+" Restore Netrw hidden file list that's expanded in vim-vinegar
+" See: https://github.com/tpope/vim-vinegar/issues/18
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 " }}}
 
 " Mappings ---------------------- {{{
