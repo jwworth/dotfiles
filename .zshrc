@@ -15,6 +15,9 @@ export ZLS_COLORS=$LSCOLORS
 export LC_CTYPE=en_US.UTF-8
 export LESS=FRX
 
+# Initialize the ZSH completion system
+autoload -U compinit; compinit
+
 # Style the prompt
 autoload -Uz vcs_info
 autoload -U colors; colors
