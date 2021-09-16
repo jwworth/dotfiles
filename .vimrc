@@ -27,6 +27,7 @@ let g:ale_fixers = {
       \   'javascript': ['prettier'],
       \   'javascript.jsx': ['prettier'],
       \   'typescriptreact': ['prettier'],
+      \   'vue': ['prettier'],
       \   'json': ['prettier'],
       \   'ruby': ['rubocop'],
       \   'scss': ['prettier'],
