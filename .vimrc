@@ -26,6 +26,7 @@ let g:ale_fixers = {
       \   'elixir': ['mix_format'],
       \   'javascript': ['prettier'],
       \   'javascript.jsx': ['prettier'],
+      \   'typescriptreact': ['prettier'],
       \   'json': ['prettier'],
       \   'ruby': ['rubocop'],
       \   'scss': ['prettier'],
