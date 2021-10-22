@@ -108,6 +108,11 @@ function changespec () {
   git diff $@ --diff-filter=d --name-only '*spec.rb' | xargs rspec
 }
 
+# Migrate an ActiveRecord database, roll it back, and migrate again.
+function twiki () {
+  rake db:migrate && rake db:migrate:redo && rake db:test:prepare
+}
+
 # Enable Erlang history (OTP 20+)
 export ERL_AFLAGS="-kernel shell_history enabled"
 
