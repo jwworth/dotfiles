@@ -4,7 +4,7 @@
 > perfect his work must first sharpen his tools." —Confucius
 
 These are my dotfiles for configuring an OSX machine to my personal
-preferences. They build on and borrow from the [Hashrocket
+preferences. They are heavily inspired by the [Hashrocket
 Dotmatrix][dotmatrix].
 
 ### Installation
