@@ -22,3 +22,6 @@ defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.5
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
+
+# See where touches occur on iOS simulator
+defaults write com.apple.iphonesimulator ShowSingleTouches 1
