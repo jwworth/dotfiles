@@ -45,6 +45,10 @@ alias vi='vim'
 alias typeless='history n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | tail -n 100'
 
 # Git ---------------------- {{{
+# Reset empty files
+gref() {
+  command git --no-pager diff --cached --stat | command grep "|\s*0$" | awk '{system("command git reset " $1)}'
+}
 alias gap='git add -p'
 alias gb='git branch'
 alias gc='git commit -v'
