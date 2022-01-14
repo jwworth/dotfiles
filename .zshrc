@@ -117,6 +117,16 @@ function twiki () {
   rake db:migrate && rake db:migrate:redo && rake db:test:prepare
 }
 
+# Update Homebrew
+function updateHomebrew () {
+  set -x
+  brew update
+  brew upgrade
+  brew cleanup -s
+  brew doctor
+  brew missing
+}
+
 # Enable Erlang history (OTP 20+)
 export ERL_AFLAGS="-kernel shell_history enabled"
 
