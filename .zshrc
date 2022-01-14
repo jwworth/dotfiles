@@ -125,3 +125,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Prefer exhuberant ctags to alternatives
 alias ctags=/usr/local/bin/ctags
+
+# Load asdf
+. /usr/local/opt/asdf/libexec/asdf.sh
