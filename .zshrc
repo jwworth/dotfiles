@@ -123,5 +123,5 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # Set up fuzzy finding
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Prefer exhuberant ctags to default
+# Prefer exhuberant ctags to alternatives
 alias ctags=/usr/local/bin/ctags
