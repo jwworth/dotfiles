@@ -1,6 +1,20 @@
+-- Silence this startup
 \set QUIET 1
+
+-- Set null to something that can be read
 \pset null 'ø'
+
+-- Use extended display
 \x auto
-\set QUIET 0
+
+-- Show timing of queries
 \timing
+
+-- Let histories be specific to each databse
 \set HISTFILE ~/.psql_history-:DBNAME
+
+-- Ignore duplicate history entries
+\set HISTCONTROL ignoredups
+
+-- Turn up the noise after startup
+\unset QUIET
