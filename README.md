@@ -1,10 +1,11 @@
-# dotfiles
+```
+ ____ ____ ____ ____ ____ ____ ____ ____
+||d |||o |||t |||f |||i |||l |||e |||s ||
+||__|||__|||__|||__|||__|||__|||__|||__||
+|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|
+```
 
-> "The expectations of life depend upon diligence; the mechanic that would
-> perfect his work must first sharpen his tools." —Confucius
-
-These are my dotfiles for configuring an OSX machine to my personal
-preferences. They are heavily inspired by the [Hashrocket
+These are my dotfiles. They are heavily inspired by the [Hashrocket
 Dotmatrix][dotmatrix].
 
 ### Installation
