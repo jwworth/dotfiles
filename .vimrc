@@ -1,10 +1,3 @@
-"  ____ ____ ____ ____
-" ||j |||a |||k |||e ||
-" ||__|||__|||__|||__||
-" |/__\|/__\|/__\|/__\|
-"
-" Jake Worth's .vimrc
-
 " Plug ---------------------- {{{
 if $VIM_PLUGINS != 'NO'
   if filereadable(expand('~/.vimbundle'))
