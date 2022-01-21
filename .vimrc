@@ -165,8 +165,14 @@ augroup END
 
 augroup filetype_docs
   autocmd!
-  " Turn off numbers and turn on spelling
+  " Turn off numbers
   autocmd FileType markdown setlocal nonumber spell
+
+  " Turn on spelling
+  autocmd FileType markdown setlocal spell
+
+  " Remove whitespace on write
+  autocmd FileType markdown BufWritePre * :%s/\s\+$//e
 augroup END
 
 augroup filetype_vim
