@@ -18,6 +18,7 @@ let g:ale_fixers = {
       \   'bash': ['shfmt'],
       \   'elixir': ['mix_format'],
       \   'javascript': ['prettier'],
+      \   'typescript': ['prettier'],
       \   'javascript.jsx': ['prettier'],
       \   'typescriptreact': ['prettier'],
       \   'vue': ['prettier'],
