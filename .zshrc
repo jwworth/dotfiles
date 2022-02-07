@@ -49,12 +49,14 @@ alias typeless='history n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | t
 gref() {
   command git --no-pager diff --cached --stat | command grep "|\s*0$" | awk '{system("command git reset " $1)}'
 }
+
 alias gap='git add -p'
 alias gb='git branch'
 alias gc='git commit -v'
 alias gca='git commit -a -v'
 alias gcl='git clean -f -d'
 alias gco='git checkout'
+alias gcom='git checkout master'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gdh='git diff HEAD'
