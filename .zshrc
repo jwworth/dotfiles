@@ -140,3 +140,6 @@ alias ctags=/usr/local/bin/ctags
 
 # Load asdf
 . /usr/local/opt/asdf/libexec/asdf.sh
+
+# Load Zsh plugins
+source ~/alias-tips/alias-tips.plugin.zsh

@@ -7,3 +7,6 @@ ln -s "$HOME"/oss/dotfiles/.* "$HOME"/
 ln -s "$HOME"/oss/dotfiles/.git_template "$HOME"/
 git config --global init.templatedir "$HOME"/.git_template
 git config --global commit.template "$HOME/.git_commit_template"
+
+# Download plugins
+(cd $HOME && git clone https://github.com/djui/alias-tips.git)
