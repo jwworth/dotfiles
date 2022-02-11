@@ -143,3 +143,8 @@ alias ctags=/usr/local/bin/ctags
 
 # Load Zsh plugins
 source ~/alias-tips/alias-tips.plugin.zsh
+
+# Add items not included in source control
+if [ -f .zshrc.secret ]; then
+  source .zshrc.secret
+fi
