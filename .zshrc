@@ -25,7 +25,7 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '*'
 zstyle ':vcs_info:*' stagedstr '+'
-zstyle ':vcs_info:git*' formats "%{$fg[cyan]%}%r/%S%{$fg[white]%} %{$fg[magenta]%}%b%{$reset_color%}%m%u%c%{$reset_color%} "
+zstyle ':vcs_info:git*' formats "%{$fg[yellow]%}%r/%S%{$fg[white]%} %{$fg[green]%}%b%{$reset_color%}%m%u%c%{$reset_color%} "
 precmd() { vcs_info }
 setopt prompt_subst
 PROMPT='${vcs_info_msg_0_}%# '
