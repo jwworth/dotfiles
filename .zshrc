@@ -129,9 +129,6 @@ function updateHomebrew () {
   brew missing
 }
 
-# Enable Erlang history (OTP 20+)
-export ERL_AFLAGS="-kernel shell_history enabled"
-
 # Set up fuzzy finding
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
