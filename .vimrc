@@ -195,7 +195,7 @@ augroup END
 
 augroup filetype_all
   autocmd!
-  " Print a quote when Vim opens
-  autocmd VimEnter * :echo "\"Real artists ship.\" –Steve Jobs"
+  " Print something when Vim opens
+  autocmd VimEnter * :echo "Momentum > Urgency"
 augroup END
 " }}}
