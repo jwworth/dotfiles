@@ -8,6 +8,8 @@
 These are my dotfiles. They are heavily inspired by the [Hashrocket
 Dotmatrix][dotmatrix].
 
+Some hard-won [advice][dont-copy].
+
 ### Installation
 
 ```
@@ -32,5 +34,6 @@ $ ./.macos
 
 These dotfiles are released under the [MIT License][mit].
 
+[dont-copy]: https://www.jakeworth.com/dont-copy-paste-dotfiles/
 [dotmatrix]: https://github.com/hashrocket/dotmatrix
 [mit]: http://www.opensource.org/licenses/MIT
