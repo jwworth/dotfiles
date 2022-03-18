@@ -21,10 +21,10 @@ let g:ale_fixers = {
       \   'typescript': ['prettier'],
       \   'javascript.jsx': ['prettier'],
       \   'typescriptreact': ['prettier'],
-      \   'vue': ['prettier'],
       \   'json': ['prettier'],
       \   'ruby': ['rubocop'],
       \   'scss': ['prettier'],
+      \   'vue': ['prettier'],
       \   'zsh': ['shfmt'],
       \}
 
