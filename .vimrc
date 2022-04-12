@@ -160,7 +160,7 @@ augroup END
 augroup filetype_docs
   autocmd!
   " Turn off numbers
-  autocmd FileType markdown setlocal nonumber spell
+  autocmd FileType markdown setlocal nonumber
 
   " Turn on spelling
   autocmd FileType markdown setlocal spell
