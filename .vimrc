@@ -164,9 +164,6 @@ augroup filetype_docs
 
   " Turn on spelling
   autocmd FileType markdown setlocal spell
-
-  " Remove whitespace on write
-  autocmd FileType markdown BufWritePre * :%s/\s\+$//e
 augroup END
 
 augroup filetype_vim
