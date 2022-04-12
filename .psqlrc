@@ -1,5 +1,5 @@
 -- Silence this startup
-\set QUIET 1
+\set QUIET on
 
 -- Set null to something that can be read
 \pset null 'ø'
@@ -17,4 +17,4 @@
 \set HISTCONTROL ignoredups
 
 -- Turn up the noise after startup
-\unset QUIET
+\set QUIET off
