@@ -13,7 +13,7 @@
 -- Set null to something that can be read
 \pset null 'ø'
 
--- Use extended display
+-- Use automatic display
 \x auto
 
 -- Show timing of queries
