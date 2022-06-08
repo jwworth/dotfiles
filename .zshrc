@@ -104,8 +104,9 @@ alias md='mkdir -p'
 alias rd='rmdir'
 # }}}
 
-# Alias my JS package manager of choice
+# Aliases my JS package manager of choice
 alias y='yarn'
+alias yj='yarn jest'
 
 # Functions
 # Run all of the tests that have changed on my current branch (Ruby).
