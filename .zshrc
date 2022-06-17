@@ -41,6 +41,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 alias v='vim'
 alias vi='vim'
 
+# Kubernetes
+alias k=kubectl
+
 # Find commands I type often so I can alias them
 alias typeless='history n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | tail -n 100'
 
