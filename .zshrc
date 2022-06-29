@@ -33,10 +33,6 @@ PROMPT='${vcs_info_msg_0_}%# '
 # Initialize autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-# Path exports
-# Add RVM to PATH
-export PATH="$PATH:$HOME/.rvm/bin"
-
 # Shorthands for my favorite editor
 alias v='vim'
 alias vi='vim'
@@ -133,19 +129,29 @@ function updateHomebrew () {
   brew missing
 }
 
-# Set up fuzzy finding
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Load fuzzy finding
+if [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+fi
+
+# Load asdf
+if [ -f /usr/local/opt/asdf/libexec/asdf.sh ]; then
+  source /usr/local/opt/asdf/libexec/asdf.sh
+fi
+
+# Load Zsh plugins
+if [ -f ~/alias-tips/alias-tips.plugin.zsh ]; then
+  source ~/alias-tips/alias-tips.plugin.zsh
+fi
+
+# Add secrets not included in source control
+if [ -f .zshrc.secret ]; then
+  source .zshrc.secret
+fi
 
 # Prefer exhuberant ctags to alternatives
 alias ctags=/usr/local/bin/ctags
 
-# Load asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
-
-# Load Zsh plugins
-source ~/alias-tips/alias-tips.plugin.zsh
-
-# Add items not included in source control
-if [ -f .zshrc.secret ]; then
-  source .zshrc.secret
-fi
+# Path exports
+# Add RVM to PATH
+export PATH="$PATH:$HOME/.rvm/bin"
