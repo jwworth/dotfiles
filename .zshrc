@@ -139,6 +139,15 @@ if [ -f /usr/local/opt/asdf/libexec/asdf.sh ]; then
   source /usr/local/opt/asdf/libexec/asdf.sh
 fi
 
+# Load NVM
+export NVM_DIR="$HOME/.nvm"
+if [ -f "$NVM_DIR/nvm.sh" ]; then
+  source "$NVM_DIR/nvm.sh"
+fi
+if [ -f "$NVM_DIR/bash_completion" ]; then
+  source "$NVM_DIR/bash_completion"
+fi
+
 # Load Zsh plugins
 if [ -f ~/alias-tips/alias-tips.plugin.zsh ]; then
   source ~/alias-tips/alias-tips.plugin.zsh
@@ -155,3 +164,4 @@ alias ctags=/usr/local/bin/ctags
 # Path exports
 # Add RVM to PATH
 export PATH="$PATH:$HOME/.rvm/bin"
+
