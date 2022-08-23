@@ -16,7 +16,6 @@ Plug 'jbranchaud/vim-bdubs'
 Plug 'jgdavey/tslime.vim'
 Plug 'jgdavey/vim-blockle'
 Plug 'jgdavey/vim-turbux'
-Plug 'jgdavey/vim-weefactor'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
