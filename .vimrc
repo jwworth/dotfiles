@@ -197,3 +197,17 @@ augroup filetype_all
   autocmd VimEnter * :echo "Momentum > Urgency"
 augroup END
 " }}}
+
+" Testing ---------------------- {{{
+" Show 7 lines below and above the cursor on vertial scrolling
+set so=7
+
+" Don't redraw while executing macros (for performance)
+set lazyredraw
+
+" Quickly open a buffer for scratchpad
+nnoremap <leader>q :e ~/buffer<cr>
+
+" Print the date and time
+iab xdate <C-r>=strftime("%m/%d/%y %H:%M:%S")<cr>
+" }}}
