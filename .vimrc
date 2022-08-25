@@ -130,6 +130,9 @@ nnoremap ruid :read !ruby -e "require 'securerandom'; p SecureRandom.uuid"<cr>
 " Insert a date
 nnoremap date :put =strftime('%FT%T%z')<cr>
 
+" Open a buffer for note-taking
+nnoremap <leader>q :e ~/buffer<cr>
+
 " Map common FZF commmands
 nnoremap <silent> <c-b> :Buffers<cr>
 nnoremap <silent> <c-g>g :Rg<cr>
@@ -204,9 +207,6 @@ set so=7
 
 " Don't redraw while executing macros (for performance)
 set lazyredraw
-
-" Quickly open a buffer for scratchpad
-nnoremap <leader>q :e ~/buffer<cr>
 
 " Print the date and time
 iab xdate <C-r>=strftime("%m/%d/%y %H:%M:%S")<cr>
