@@ -27,6 +27,10 @@ let g:ale_fixers = {
       \   'zsh': ['shfmt'],
       \}
 
+let g:ale_linters_ignore = {
+      \   'vue': ['eslint'],
+      \}
+
 let g:ale_fix_on_save = 1
 " }}}
 
