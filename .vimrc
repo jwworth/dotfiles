@@ -9,10 +9,9 @@ endif
 " ALE ---------------------- {{{
 let g:ale_sign_error = 'X'
 let g:ale_sign_warning = '!'
+
 highlight link ALEWarningSign ErrorMsg
 highlight link ALEErrorSign WarningMsg
-nnoremap <silent> <leader>ne :ALENextWrap<CR>
-nnoremap <silent> <leader>pe :ALEPreviousWrap<CR>
 
 let g:ale_fixers = {
       \   'bash': ['shfmt'],
