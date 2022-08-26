@@ -33,9 +33,8 @@ PROMPT='${vcs_info_msg_0_}%# '
 # Initialize autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-# Shorthands for my favorite editor
+# Shorthand for my favorite editor
 alias v='vim'
-alias vi='vim'
 
 # Kubernetes
 alias k=kubectl
