@@ -131,7 +131,7 @@ nnoremap ruid :read !ruby -e "require 'securerandom'; p SecureRandom.uuid"<cr>
 nnoremap date :put =strftime('%FT%T%z')<cr>
 
 " Open a buffer for note-taking
-nnoremap <leader>q :e ~/buffer<cr>
+nnoremap <leader>q :e .scratch<cr>i<cr>
 
 " Map common FZF commmands
 nnoremap <silent> <c-b> :Buffers<cr>
