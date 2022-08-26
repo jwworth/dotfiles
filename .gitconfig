@@ -24,3 +24,5 @@
 	template = /Users/jakeworth/.git_commit_template
 [github]
 	user = jwworth
+[init]
+	defaultBranch = main
