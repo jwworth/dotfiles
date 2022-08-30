@@ -57,6 +57,12 @@ set exrc
 " Use a visual bell instead of beeping
 set visualbell
 
+" Show 7 lines below and above the cursor on vertial scrolling
+set so=7
+
+" Don't redraw while executing macros (perf)
+set lazyredraw
+
 " Command-line completion operates in an enhanced mode
 set wildmenu
 set wildmode=list:longest,full
@@ -205,12 +211,4 @@ augroup END
 " }}}
 
 " Testing ---------------------- {{{
-" Show 7 lines below and above the cursor on vertial scrolling
-set so=7
-
-" Don't redraw while executing macros (for performance)
-set lazyredraw
-
-" Print the date and time
-iab xdate <C-r>=strftime("%m/%d/%y %H:%M:%S")<cr>
 " }}}
