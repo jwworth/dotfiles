@@ -19,9 +19,9 @@
 [interactive]
 	singlekey = true
 [init]
-	templatedir = /Users/jakeworth/.git_template
+	templatedir = ~/.git_template
 [commit]
-	template = /Users/jakeworth/.git_commit_template
+	template = ~/.git_commit_template
 [github]
 	user = jwworth
 [init]
