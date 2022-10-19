@@ -10,3 +10,6 @@ git config --global commit.template "$HOME/.git_commit_template"
 
 # Download plugins
 (cd $HOME && git clone https://github.com/djui/alias-tips.git)
+
+# Update /etc/hosts to my preferences
+cat etc/hosts.txt | sudo tee -a /etc/hosts ; sudo dscacheutil -flushcache

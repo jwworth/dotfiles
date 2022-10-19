@@ -1,0 +1,10 @@
+
+# Distracting websites
+0.0.0.0	www.facebook.com
+0.0.0.0	facebook.com
+0.0.0.0	www.instagram.com
+0.0.0.0	instagram.com
+0.0.0.0	www.nytimes.com
+0.0.0.0	nytimes.com
+0.0.0.0	www.twitter.com
+0.0.0.0	twitter.com
