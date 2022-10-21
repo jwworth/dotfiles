@@ -113,6 +113,11 @@ function changespec () {
   git diff $@ --diff-filter=d --name-only '*spec.rb' | xargs rspec
 }
 
+# Print the last exit status
+function print_status() {
+  echo $?
+}
+
 # Migrate an ActiveRecord database, roll it back, and migrate again.
 function twiki () {
   rake db:migrate && rake db:migrate:redo && rake db:test:prepare
