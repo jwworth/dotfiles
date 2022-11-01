@@ -1,4 +1,6 @@
 " Plug ---------------------- {{{
+" Requires vim-plug:
+" https://github.com/junegunn/vim-plug
 if $VIM_PLUGINS != 'NO'
   if filereadable(expand('~/.vimbundle'))
     source ~/.vimbundle
