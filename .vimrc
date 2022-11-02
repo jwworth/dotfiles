@@ -91,15 +91,6 @@ colorscheme PaperColor
 " Allow Vim-JSX to highlight *.js files
 let g:jsx_ext_required = 0
 
-" Allow MatchTagAlways to highlight JSX
-let g:mta_filetypes = {
-    \ 'html' : 1,
-    \ 'xhtml' : 1,
-    \ 'xml' : 1,
-    \ 'jinja' : 1,
-    \ 'javascript.jsx' : 1,
-    \}
-
 " Turn on vim-closetag for JavaScript
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 

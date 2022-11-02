@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Valloric/MatchTagAlways'
 Plug 'adamlowe/vim-slurper'
 Plug 'ap/vim-css-color'
 Plug 'dkarter/bullets.vim'
