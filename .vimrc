@@ -117,7 +117,9 @@ nnoremap <leader>pt :!prettier %<CR>
 " Substitute the word under cursor (h/t Vidal Ekechukwu)
 vnoremap <c-r> "hy:%s/<c-r>h//gc<left><left><left>
 
-" Search for word under cursor with RipGrep
+" Search for word under cursor
+" Requires ripgrep:
+" https://github.com/BurntSushi/ripgrep
 nnoremap <leader>g :<C-U>execute "Rg ".expand('<cword>') \| cw<CR>
 
 " Remove ^M linebreaks
@@ -136,6 +138,8 @@ nnoremap date :put =strftime('%FT%T%z')<cr>
 nnoremap <leader>q :e .scratch<cr>i<cr>
 
 " Map common FZF commmands
+" Requires ripgrep:
+" https://github.com/BurntSushi/ripgrep
 nnoremap <silent> <c-b> :Buffers<cr>
 nnoremap <silent> <c-g>g :Rg<cr>
 nnoremap <silent> <c-p> :Files<cr>
