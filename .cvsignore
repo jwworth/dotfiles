@@ -1,8 +1,10 @@
 *~
 .*.sw?
 .sw?
-.DS_Store
+
 /tags
-.tool-versions
-.scratch
+
+.DS_Store
 .projections.json
+.scratch
+.tool-versions
