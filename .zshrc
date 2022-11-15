@@ -54,7 +54,7 @@ alias gc='git commit -v'
 alias gca='git commit -a -v'
 alias gcl='git clean -f -d'
 alias gco='git checkout'
-alias gcom='git checkout master'
+alias gcom='git checkout main'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gdh='git diff HEAD'
@@ -62,7 +62,7 @@ alias gl='git pull'
 alias glg='git log --graph --oneline --decorate --color --all'
 alias glod='git log --oneline --decorate'
 alias glp='git log -p'
-alias gmr='git checkout master && git pull --rebase && git checkout - && git rebase master'
+alias gmr='git checkout main && git pull --rebase && git checkout - && git rebase main'
 alias gnap='git add -N --ignore-removal . && gap && gref'
 alias gp='git push'
 alias gplease='git push --force-with-lease'
@@ -70,7 +70,7 @@ alias gpr='git pull --rebase'
 alias gr='git rebase'
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
-alias grim='git rebase -i master'
+alias grim='git rebase -i main'
 alias gst='git status'
 alias mgrim='gmr && grim'
 alias reset-authors='git commit --amend --reset-author -C HEAD'
@@ -108,7 +108,7 @@ alias yj='yarn jest'
 
 # Functions
 # Run all of the tests that have changed on my current branch (Ruby).
-# Usage: `$ changespec master`
+# Usage: `$ changespec main`
 function changespec () {
   git diff $@ --diff-filter=d --name-only '*spec.rb' | xargs rspec
 }
