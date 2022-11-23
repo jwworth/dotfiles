@@ -1,11 +1,9 @@
+*.diff
 *~
 .*.sw?
-.sw?
-
-/tags
-
 .DS_Store
 .projections.json
 .scratch
+.sw?
 .tool-versions
-*.diff
+tags
