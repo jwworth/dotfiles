@@ -89,7 +89,7 @@ setopt INC_APPEND_HISTORY
 
 # Rails ---------------------- {{{
 alias be='bundle exec'
-alias groutes='rake routes | rg $@'
+alias groutes='rails routes | rg $@'
 alias sc='rails console'
 alias ss='rails server'
 # }}}
