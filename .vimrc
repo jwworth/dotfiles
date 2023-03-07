@@ -144,6 +144,9 @@ nnoremap <silent> <c-b> :Buffers<cr>
 nnoremap <silent> <c-g>g :Rg<cr>
 nnoremap <silent> <c-p> :Files<cr>
 
+" Yank the path of the current buffer into the paste buffer
+nnoremap yf :let @+ = expand('%:p') <cr>
+
 " Yank file and line number under cursor (great for code reviews)
 nnoremap <silent> yfl :let @" = join([expand('%'), line(".")], ':')<cr>
 
