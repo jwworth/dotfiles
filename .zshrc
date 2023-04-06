@@ -111,7 +111,32 @@ alias yj='yarn jest'
 alias yo='yarn outdated'
 # }}}
 
-# Functions
+# Functions ---------------------- {{{
+# Change the terminal color when I'm in a remote console
+function set_color() {
+  local R=$1
+  local G=$2
+  local B=$3
+  /usr/bin/osascript <<EOF
+tell application "iTerm"
+  tell current session of current window
+    set background color to {$(($R*65535/255)), $(($G*65535/255)), $(($B*65535/255))}
+  end tell
+end tell
+EOF
+}
+
+function reset_colors() {
+  set_color 0 0 0
+}
+
+# Example use
+function prod_console() {
+  set_color 46 0 0
+  heroku console -a your-api # Change to your API
+  reset_colors
+}
+
 # Run all of the tests that have changed on my current branch (Ruby).
 # Usage: `$ changespec main`
 function changespec () {
@@ -137,6 +162,7 @@ function updateHomebrew () {
   brew doctor
   brew missing
 }
+# }}}
 
 # Load fuzzy finding
 if [ -f ~/.fzf.zsh ]; then
@@ -167,10 +193,8 @@ if [ -f .zshrc.secret ]; then
   source .zshrc.secret
 fi
 
-# Prefer exhuberant ctags to alternatives
-alias ctags=/usr/local/bin/ctags
-
 # Path exports
 # Add RVM to PATH
 export PATH="$PATH:$HOME/.rvm/bin"
 
+export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
