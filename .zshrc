@@ -30,14 +30,8 @@ precmd() { vcs_info }
 setopt prompt_subst
 PROMPT='${vcs_info_msg_0_}%# '
 
-# Initialize autojump
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-
 # Shorthand for my favorite editor
 alias v='vim'
-
-# Kubernetes
-alias k=kubectl
 
 # Find commands I type often so I can alias them
 alias typeless='history n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | tail -n 100'
@@ -164,6 +158,10 @@ function updateHomebrew () {
 }
 # }}}
 
+# Autoloading ---------------------- {{{
+# Load autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
 # Load fuzzy finding
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
@@ -192,9 +190,12 @@ fi
 if [ -f .zshrc.secret ]; then
   source .zshrc.secret
 fi
+# }}}
 
-# Path exports
-# Add RVM to PATH
+# Extend PATH ---------------------- {{{
+# Add RVM
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Add PostgreSQL
 export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+# }}}
