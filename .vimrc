@@ -178,10 +178,10 @@ augroup filetype_docs
   autocmd FileType markdown setlocal spell
 augroup END
 
-augroup filetype_vim
+augroup filetype_dotfiles
   autocmd!
   " Fold this file on markers
-  autocmd FileType vim setlocal foldmethod=marker
+  autocmd FileType vim,zsh setlocal foldmethod=marker
 augroup END
 
 augroup filetype_haml
