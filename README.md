@@ -30,6 +30,8 @@ To set up a new Mac, run:
 $ ./.macos
 ```
 
+To use the [Husky][husky] scripts, copy `.husky/` to your Husky-enabled project.
+
 ### License
 
 These dotfiles are released under the [MIT License][mit].
@@ -37,3 +39,4 @@ These dotfiles are released under the [MIT License][mit].
 [dont-copy]: https://www.jakeworth.com/dont-copy-paste-dotfiles/
 [dotmatrix]: https://github.com/hashrocket/dotmatrix
 [mit]: http://www.opensource.org/licenses/MIT
+[husky]: https://www.npmjs.com/package/husky

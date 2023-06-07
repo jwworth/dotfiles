@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Get the current branch name
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+
+if [[ $BRANCH_NAME != "main" && $BRANCH_NAME =~ ([0-9]{9}) ]]; then
+  # Extract the Tracker ID from the branch name
+  STRING=${BASH_REMATCH[1]}
+
+  # Prepend the Tracker ID to the commit message
+  sed -i.bak -e "1s/^/[#$STRING] /" "$1"
+fi
