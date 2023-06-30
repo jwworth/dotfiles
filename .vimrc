@@ -1,6 +1,6 @@
 " Plug ---------------------- {{{
 " Requires vim-plug:
-" https://github.com/junegunn/vim-plug
+" junegunn/vim-plug
 if $VIM_PLUGINS != 'NO'
   if filereadable(expand('~/.vimbundle'))
     source ~/.vimbundle
@@ -9,6 +9,8 @@ endif
 " }}}
 
 " ALE ---------------------- {{{
+" Requires ALE:
+" dense-analysis/ale
 let g:ale_sign_error = 'X'
 let g:ale_sign_warning = '!'
 
@@ -59,7 +61,7 @@ set exrc
 " Use a visual bell instead of beeping
 set visualbell
 
-" Show 7 lines below and above the cursor on vertial scrolling
+" Show 7 lines below and above the cursor on vertical scrolling
 set so=7
 
 " Don't redraw while executing macros (perf)
@@ -72,7 +74,7 @@ set wildmode=list:longest,full
 " Vertical splits split right
 set splitright
 
-" Splits split below
+" Horitzontal splits split below
 set splitbelow
 
 " Hides buffers instead of closing them
@@ -86,32 +88,43 @@ set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 set shell=bash
 
 " Set default colors
+" Requires vim-colorschemes or similar:
+" flazz/vim-colorschemes
 colorscheme PaperColor
 
 " Allow Vim-JSX to highlight *.js files
+" Requires vim-jsx:
+" mxw/vim-jsx
 let g:jsx_ext_required = 0
 
 " Turn on vim-closetag for JavaScript
+" Requires vim-closetag:
+" alvan/vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 
 " Configure vim-mix-format
+" Requires vim-mix-format:
+" mhinz/vim-mix-format
 let g:mix_format_on_save = 1
 let g:mix_format_options = '--check-equivalent'
 let g:mix_format_silent_errors = 1
 
 " Restore Netrw hidden file list that's expanded in vim-vinegar
 " See: https://github.com/tpope/vim-vinegar/issues/18
+" Requires vim-vinegar:
+" tpope/vim-vinegar
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 " }}}
 
 " Mappings ---------------------- {{{
-" Disable arrow keys (helped me learn Vim, and I do not use them)
+" Disable arrow keys (helped me learn Vim, and now I don't use them)
 noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
 " Shows the output from Prettier
+" Requires Pretter (npm install --save-dev prettier)
 nnoremap <leader>pt :!prettier %<CR>
 
 " Substitute the word under cursor (h/t Vidal Ekechukwu)
@@ -119,7 +132,7 @@ vnoremap <c-r> "hy:%s/<c-r>h//gc<left><left><left>
 
 " Search for word under cursor
 " Requires ripgrep:
-" https://github.com/BurntSushi/ripgrep
+" BurntSushi/ripgrep
 nnoremap <leader>g :<C-U>execute "Rg ".expand('<cword>') \| cw<CR>
 
 " Remove ^M linebreaks
@@ -139,7 +152,7 @@ nnoremap <leader>q :e .scratch<cr>i<cr>
 
 " Map common FZF commmands
 " Requires ripgrep:
-" https://github.com/BurntSushi/ripgrep
+" BurntSushi/ripgrep
 nnoremap <silent> <c-b> :Buffers<cr>
 nnoremap <silent> <c-g>g :Rg<cr>
 nnoremap <silent> <c-p> :Files<cr>
