@@ -28,6 +28,7 @@ let g:ale_fixers = {
       \   'ruby': ['rubocop'],
       \   'scss': ['prettier'],
       \   'vue': ['prettier'],
+      \   'html': ['prettier'],
       \   'zsh': ['shfmt'],
       \}
 
