@@ -1,25 +1,37 @@
-# Non-work websites
+# Distracting websites
+
 0.0.0.0	www.facebook.com
 0.0.0.0	facebook.com
+
 0.0.0.0	www.cnn.com
 0.0.0.0	cnn.com
+
 0.0.0.0	www.instagram.com
 0.0.0.0	instagram.com
+
 0.0.0.0	www.nytimes.com
 0.0.0.0	nytimes.com
+
 0.0.0.0	www.twitter.com
 0.0.0.0	twitter.com
+
 0.0.0.0	www.theguardian.com
 0.0.0.0	theguardian.com
+
 0.0.0.0	www.reddit.com
 0.0.0.0	reddit.com
+
 0.0.0.0	www.espn.com
 0.0.0.0	espn.com
+
 0.0.0.0	www.slate.com
 0.0.0.0	slate.com
+
 0.0.0.0	www.theatlantic.com
 0.0.0.0	theatlantic.com
+
 0.0.0.0	news.yahoo.com
 0.0.0.0	www.news.yahoo.com
+
 0.0.0.0	usnews.com
 0.0.0.0	www.usnews.com
