@@ -35,3 +35,6 @@
 
 0.0.0.0	usnews.com
 0.0.0.0	www.usnews.com
+
+0.0.0.0	www.medium.com
+0.0.0.0	medium.com

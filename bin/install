@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Make OSS directory
+[ -d "$HOME"/oss ] || mkdir "$HOME"/oss
+
 # Symlink dotfiles
 ln -s "$HOME"/oss/dotfiles/.* "$HOME"/
 
