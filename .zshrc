@@ -107,6 +107,11 @@ alias yo='yarn outdated'
 # }}}
 
 # Functions ---------------------- {{{
+# Create a tmux session to my specifications
+function mux() {
+  tmux new-session \; rename-session ${1} \; split-window \; select-layout main-vertical &>/dev/null \; send-keys -t $name:0.1 'vim .' C-m \; attach
+}
+
 # Change the terminal color when I'm in a remote console
 function set_color() {
   local R=$1
