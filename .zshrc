@@ -109,7 +109,7 @@ alias yo='yarn outdated'
 # Functions ---------------------- {{{
 # Create a tmux session to my specifications
 function mux() {
-  tmux new-session \; rename-session ${1} \; split-window \; select-layout main-vertical &>/dev/null \; send-keys -t $name:0.1 'vim .' C-m \; attach
+  tmux new-session \; rename-session ${1} \; new-window -n server \; last-window \; split-window \; select-layout main-vertical &>/dev/null \; send-keys -t $name:0.1 'vim .' C-m \; attach
 }
 
 # Change the terminal color when I'm in a remote console
@@ -139,7 +139,7 @@ function prod_console() {
 
 # Run all of the tests that have changed on my current branch (Ruby).
 # Usage: `$ changespec main`
-function changespec () {
+function changespec() {
   git diff $@ --diff-filter=d --name-only '*spec.rb' | xargs rspec
 }
 
