@@ -19,19 +19,18 @@ export LESS=FRX
 autoload -U compinit; compinit
 
 # Style the prompt
-autoload -Uz vcs_info
-autoload -U colors; colors
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '*'
-zstyle ':vcs_info:*' stagedstr '+'
-zstyle ':vcs_info:git*' formats "%{$fg[yellow]%}%r/%S%{$fg[white]%} %{$fg[green]%}%b%{$reset_color%}%m%u%c%{$reset_color%} "
-precmd() { vcs_info }
-setopt prompt_subst
-PROMPT='${vcs_info_msg_0_}%# '
+# autoload -Uz vcs_info
+# autoload -U colors; colors
+# zstyle ':vcs_info:*' enable git
+# zstyle ':vcs_info:*' check-for-changes true
+# zstyle ':vcs_info:*' unstagedstr '*'
+# zstyle ':vcs_info:*' stagedstr '+'
+# zstyle ':vcs_info:git*' formats "%{$fg[yellow]%}%r/%S%{$fg[white]%} %{$fg[green]%}%b%{$reset_color%}%m%u%c%{$reset_color%} "
+# precmd() { vcs_info }
+# setopt prompt_subst
+# PROMPT='${vcs_info_msg_0_}%# '
 
 # Shorthand for my favorite editor
-alias v='vim'
 alias vim='/opt/homebrew/bin/vim'
 
 # Find commands I type often so I can alias them
@@ -46,20 +45,12 @@ gref() {
 alias gap='git add -p'
 alias gb='git branch'
 alias gc='git commit -v'
-alias gca='git commit -a -v'
 alias gcheddar='git commit --amend -CHEAD'
-alias gcl='git clean -f -d'
 alias gco='git checkout'
-alias gcom='git checkout main'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gdh='git diff HEAD'
 alias gdoff='git reset HEAD\^'
-alias gl='git pull'
 alias glg='git log --graph --oneline --decorate --color --all'
 alias glod='git log --oneline --decorate'
 alias glp='git log -p'
-alias gmr='git checkout main && git pull --rebase && git checkout - && git rebase main'
 alias gnap='git add -N --ignore-removal . && gap && gref'
 alias gp='git push'
 alias gplease='git push --force-with-lease'
@@ -70,8 +61,6 @@ alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias grim='git rebase -i main'
 alias gst='git status'
-alias mgrim='gmr && grim'
-alias reset-authors='git commit --amend --reset-author -C HEAD'
 # }}}
 
 # History ---------------------- {{{
@@ -84,13 +73,6 @@ setopt INC_APPEND_HISTORY
 
 # File management ---------------------- {{{
 alias ..='cd ..'
-alias cd..='cd ..'
-alias l='ls -F -G -lah'
-alias la='ls -a'
-alias ll='ls -l'
-alias lsd='ls -ld *(-/DN)'
-alias md='mkdir -p'
-alias rd='rmdir'
 # }}}
 
 # Functions ---------------------- {{{
@@ -139,6 +121,7 @@ export NVM_DIR="$HOME/.nvm"
 if [ -f "$NVM_DIR/nvm.sh" ]; then
   source "$NVM_DIR/nvm.sh"
 fi
+
 if [ -f "$NVM_DIR/bash_completion" ]; then
   source "$NVM_DIR/bash_completion"
 fi
@@ -152,7 +135,4 @@ fi
 # Extend PATH ---------------------- {{{
 # Add RVM
 export PATH="$PATH:$HOME/.rvm/bin"
-
-# Add PostgreSQL
-export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
 # }}}
