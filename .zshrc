@@ -82,13 +82,6 @@ setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
 # }}}
 
-# Rails ---------------------- {{{
-alias be='bundle exec'
-alias groutes='rails routes | rg $@'
-alias sc='rails console'
-alias ss='rails server'
-# }}}
-
 # File management ---------------------- {{{
 alias ..='cd ..'
 alias cd..='cd ..'
@@ -98,12 +91,6 @@ alias ll='ls -l'
 alias lsd='ls -ld *(-/DN)'
 alias md='mkdir -p'
 alias rd='rmdir'
-# }}}
-
-# Yarn ---------------------- {{{
-alias y='yarn'
-alias yj='yarn jest'
-alias yo='yarn outdated'
 # }}}
 
 # Functions ---------------------- {{{
@@ -136,32 +123,6 @@ function prod_console() {
   heroku console -a your-api # Change to your API
   reset_colors
 }
-
-# Run all of the tests that have changed on my current branch (Ruby).
-# Usage: `$ changespec main`
-function changespec() {
-  git diff $@ --diff-filter=d --name-only '*spec.rb' | xargs rspec
-}
-
-# Print the last exit status
-function print_status() {
-  echo $?
-}
-
-# Migrate an ActiveRecord database, roll it back, and migrate again.
-function twiki () {
-  rake db:migrate && rake db:migrate:redo && rake db:test:prepare
-}
-
-# Update Homebrew
-function updateHomebrew () {
-  set -x
-  brew update
-  brew upgrade
-  brew cleanup -s
-  brew doctor
-  brew missing
-}
 # }}}
 
 # Autoloading ---------------------- {{{
@@ -171,11 +132,6 @@ function updateHomebrew () {
 # Load fuzzy finding
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
-fi
-
-# Load asdf
-if [ -f /usr/local/opt/asdf/libexec/asdf.sh ]; then
-  source /usr/local/opt/asdf/libexec/asdf.sh
 fi
 
 # Load NVM
@@ -190,11 +146,6 @@ fi
 # Load Zsh plugins
 if [ -f ~/alias-tips/alias-tips.plugin.zsh ]; then
   source ~/alias-tips/alias-tips.plugin.zsh
-fi
-
-# Add secrets not included in source control
-if [ -f .zshrc.secret ]; then
-  source .zshrc.secret
 fi
 # }}}
 
