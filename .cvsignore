@@ -1,10 +1,14 @@
 *.diff
+*.secret
+*.slurper
 *~
 .*.sw?
+
 .DS_Store
 .projections.json
+.rgignore
 .scratch
 .sw?
 .tool-versions
+slurper_config.yml
 tags
-.rgignore
