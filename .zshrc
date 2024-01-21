@@ -19,16 +19,16 @@ export LESS=FRX
 autoload -U compinit; compinit
 
 # Style the prompt
-# autoload -Uz vcs_info
-# autoload -U colors; colors
-# zstyle ':vcs_info:*' enable git
-# zstyle ':vcs_info:*' check-for-changes true
-# zstyle ':vcs_info:*' unstagedstr '*'
-# zstyle ':vcs_info:*' stagedstr '+'
-# zstyle ':vcs_info:git*' formats "%{$fg[yellow]%}%r/%S%{$fg[white]%} %{$fg[green]%}%b%{$reset_color%}%m%u%c%{$reset_color%} "
-# precmd() { vcs_info }
-# setopt prompt_subst
-# PROMPT='${vcs_info_msg_0_}%# '
+autoload -Uz vcs_info
+autoload -U colors; colors
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '*'
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:git*' formats "%{$fg[yellow]%}%r/%S%{$fg[white]%} %{$fg[green]%}%b%{$reset_color%}%m%u%c%{$reset_color%} "
+precmd() { vcs_info }
+setopt prompt_subst
+PROMPT='${vcs_info_msg_0_}%# '
 
 # Shorthand for my favorite editor
 alias vim='/opt/homebrew/bin/vim'
