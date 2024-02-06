@@ -108,11 +108,44 @@ function reset_colors() {
   set_color 0 0 0
 }
 
-# Example use
+# Load function variables I don't want in version control
+if [ -f ~/.zshrc.secret ]; then
+  source ~/.zshrc.secret
+fi
+
+# Open a prod console
 function prod_console() {
   set_color 46 0 0
-  heroku console -a your-api # Change to your API
+  heroku console -a $prodapi
   reset_colors
+}
+
+# Open a staging console
+function staging_console() {
+  set_color 46 46 0
+  heroku console -a $stagingapi
+  reset_colors
+}
+
+# Open my personal GitHub review page
+# Example variable:
+# reviewpage=https://github.com/pulls?q=is%3Aopen+is%3Apr+review-requested%3Ajwworth+archived%3Afalse+user%3Ahashrocket'
+function rr() {
+   open $reviewpage
+}
+
+# Open my a PR on my current Git branch
+# Example variable:
+# prpage='https://github.com/hashrocket/hashrocket-rb/compare/$(git branch --show-current)?expand=1'
+function pr() {
+  open $prpage
+}
+
+# Open my Pivotal Tracker
+# Example variable:
+# pivotal='https://www.pivotaltracker.com/n/projects/2582520'
+function pt() {
+  open $pivotal
 }
 # }}}
 
