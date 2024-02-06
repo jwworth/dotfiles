@@ -12,3 +12,4 @@
 .tool-versions
 slurper_config.yml
 tags
+*.bak
