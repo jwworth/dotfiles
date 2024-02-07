@@ -136,9 +136,9 @@ function rr() {
 
 # Open my a PR on my current Git branch
 # Example variable:
-# prpage='https://github.com/hashrocket/hashrocket-rb/compare/$(git branch --show-current)?expand=1'
+# prpage='https://github.com/hashrocket/hashrocket-rb/compare'
 function pr() {
-  open $prpage
+  open "$prpage/$(git branch --show-current)?expand=1"
 }
 
 # Open my Pivotal Tracker
