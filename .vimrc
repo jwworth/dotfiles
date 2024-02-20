@@ -222,11 +222,6 @@ augroup filetype_all
   autocmd!
   " Print something when Vim opens
   autocmd VimEnter * :echo "Momentum > Urgency"
-
-  " Turn on hard mode
-  " Requires hardmode:
-  " wikitopian/hardmode
-  autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 augroup END
 " }}}
 
