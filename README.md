@@ -8,7 +8,11 @@
 These are my dotfiles. They are heavily inspired by the [Hashrocket
 Dotmatrix][dotmatrix].
 
-Some hard-won [advice][dont-copy].
+Some hard-won advice: don't add a configuration to your environment that you
+don't understand. If you don't know what a configuration does, you can waste
+time fixing a 'bug' that was actually misconfiguration or expected behavior in
+your setup. And every configuration is a tradeoff. It pays to know what that
+tradeoff is.
 
 ### Installation
 
@@ -36,7 +40,6 @@ To use the [Husky][husky] scripts, copy `.husky/` to your Husky-enabled project.
 
 These dotfiles are released under the [MIT License][mit].
 
-[dont-copy]: https://www.jakeworth.com/dont-copy-paste-dotfiles/
 [dotmatrix]: https://github.com/hashrocket/dotmatrix
 [mit]: http://www.opensource.org/licenses/MIT
 [husky]: https://www.npmjs.com/package/husky
