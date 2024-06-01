@@ -191,6 +191,9 @@ augroup filetype_docs
 
   " Turn on spelling
   autocmd FileType markdown setlocal spell
+
+  " Insert 'more' break for Hugo
+  nnoremap mor i<!--more--><enter><esc>
 augroup END
 
 augroup filetype_dotfiles
