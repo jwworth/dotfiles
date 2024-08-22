@@ -95,6 +95,11 @@ function checkpoint() {
   git add . && git commit -m "Checkpoint $(date)"
 }
 
+# Upgrade Node dependency on a named branch
+function npmupgrade() {
+  npm upgrade $1 && git checkout -b chore/upgrade-$1 && git add . && git commit -m "Upgrade $1"
+}
+
 # Change the terminal color when I'm in a remote console
 function set_color() {
   local R=$1
