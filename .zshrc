@@ -90,9 +90,9 @@ function mux() {
   tmux new-session \; rename-session ${1} \; new-window -n server \; last-window \; split-window \; select-layout main-vertical &>/dev/null \; send-keys -t $name:0.1 'vim .' C-m \; attach
 }
 
-# Generic timestaped Git commit
+# Generic timestamped Git commit
 function checkpoint() {
-  git commit -m "Checkpoint $(date)"
+  git add . && git commit -m "Checkpoint $(date)"
 }
 
 # Change the terminal color when I'm in a remote console
