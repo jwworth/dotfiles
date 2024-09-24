@@ -137,9 +137,6 @@ vnoremap <c-r> "hy:%s/<c-r>h//gc<left><left><left>
 " BurntSushi/ripgrep
 nnoremap <leader>g :<C-U>execute "Rg ".expand('<cword>') \| cw<CR>
 
-" Remove ^M linebreaks
-nnoremap gsp :e ++ff=dos<cr>:w<cr>
-
 " Vidal and Dorian Sort™. Sort the highlighted lines
 vnoremap <silent> gs :sort<cr>
 
@@ -188,6 +185,9 @@ augroup filetype_docs
   autocmd!
   " Turn off numbers
   autocmd FileType markdown setlocal nonumber
+
+  " Fix spelling
+  nnoremap gsp 1z=
 
   " Turn on spelling
   autocmd FileType markdown setlocal spell
