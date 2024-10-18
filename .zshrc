@@ -85,6 +85,11 @@ alias ..='cd ..'
 # }}}
 
 # Functions ---------------------- {{{
+# Put a UUID into my paste buffer
+function ruid() {
+  ruby -e "require 'securerandom'; print SecureRandom.uuid" | tr -d '"' | pbcopy
+}
+
 # Create a tmux session to my specifications
 function mux() {
   tmux new-session \; rename-session ${1} \; new-window -n server \; last-window \; split-window \; select-layout main-vertical &>/dev/null \; send-keys -t $name:0.1 'vim .' C-m \; attach
