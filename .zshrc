@@ -169,6 +169,9 @@ nvm() {
   nvm "$@"
 }
 
+# Load NVM bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 # Load pyenv
 if command -v pyenv >/dev/null 2>&1; then
   export PYENV_ROOT="$HOME/.pyenv"
