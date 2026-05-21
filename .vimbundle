@@ -65,4 +65,7 @@ Plug 'godlygeek/tabular'
 " Insert mode tab-complete
 Plug 'ervandew/supertab'
 
+" Smarter Vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
