@@ -135,7 +135,7 @@ augroup filetype_gitcommit
   autocmd FileType gitcommit setlocal spell
 augroup END
 
-augroup filetype_docs
+augroup filetype_prose
   autocmd!
   " Turn off numbers
   autocmd FileType markdown setlocal nonumber
