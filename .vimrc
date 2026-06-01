@@ -145,6 +145,9 @@ augroup filetype_prose
 
   " Turn on spelling
   autocmd FileType markdown setlocal spell
+
+  " Disable COC
+  autocmd FileType markdown,text,gitcommit,asciidoc,rst,org,tex,plaintex let b:coc_enabled = 0
 augroup END
 
 augroup filetype_dotfiles
