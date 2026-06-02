@@ -18,6 +18,7 @@ endif
 " ALE ---------------------- {{{
 let g:ale_fixers = {
 \   'css': ['prettier'],
+\   'scss': ['prettier'],
 \   'html': ['prettier'],
 \   'javascript': ['prettier'],
 \   'javascript.jsx': ['prettier'],
