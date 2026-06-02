@@ -51,6 +51,9 @@ alias vim='/opt/homebrew/bin/vim'
 # Shorthand for my python
 alias python="python3"
 
+# Shorthand for Node REPL
+alias jsc="node"
+
 # Find commands I type often so I can alias them
 alias typeless='history n 20000 | sed "s/.*  //"  | sort | uniq -c | sort -g | tail -n 100'
 
