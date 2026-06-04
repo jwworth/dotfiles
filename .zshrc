@@ -171,13 +171,6 @@ export NVM_DIR="$HOME/.nvm"
 # This loads nvm bash_completion
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# Load pyenv
-if command -v pyenv >/dev/null 2>&1; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init - zsh)"
-fi
-
 # Load private ZSH settings, if present
 if [ -f "~/.zshrc.secret" ]; then
   source "~/.zshrc.secret"
