@@ -142,6 +142,11 @@ prettify() {
     mv -- "$temp_file" "$1"
 }
 
+# Open a canvas for drawing
+draw() {
+  open 'https://excalidraw.com/'
+}
+
 # Test that Ruby on Rails migrations work forward and backward
 # h/t Hashrocket Dotmatrix
 # usage: twiki
