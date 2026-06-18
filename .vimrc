@@ -34,7 +34,8 @@ let g:ale_fixers = {
 
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'javascriptreact': ['eslint']
+\   'javascriptreact': ['eslint'],
+\   'markdown': ['vale']
 \}
 
 " Tell ALE to run only linters I've explicitly configured

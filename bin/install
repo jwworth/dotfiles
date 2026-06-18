@@ -2,7 +2,7 @@
 
 # Install homebrew packages
 brew update
-brew install autojump figlet fzf ripgrep vim tmux
+brew install autojump figlet fzf ripgrep vim tmux vale
 
 # Pull or update agent skills submodule
 if ! git submodule status agent-skills  >/dev/null 2>&1; then
