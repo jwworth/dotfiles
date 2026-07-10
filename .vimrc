@@ -169,3 +169,6 @@ augroup filetype_all
   autocmd VimEnter * ++once echo "Momentum > Urgency"
 augroup END
 " }}}
+
+command! TILURL let @+ = 'https://www.jakeworth.com/tils/' . expand('%:t:r') . '/'
+command! TILOpen execute '!open https://www.jakeworth.com/tils/' . expand('%:t:r') . '/'
