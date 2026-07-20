@@ -46,7 +46,6 @@ let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
 " }}}
 
-
 " COC ---------------------- {{{
 let g:coc_global_extensions = [
     \ 'coc-tsserver',
@@ -180,5 +179,7 @@ augroup filetype_all
 augroup END
 " }}}
 
+" Special and experimental commands ---------------------- {{{
 command! TILURL let @+ = 'https://www.jakeworth.com/tils/' . expand('%:t:r') . '/'
 command! TILOpen execute '!open https://www.jakeworth.com/tils/' . expand('%:t:r') . '/'
+" }}}
