@@ -1,9 +1,10 @@
-" ____ ____ ____ ____ ____ 
-" ||v |||i |||m |||r |||c ||
-" ||__|||__|||__|||__|||__||
-" |/__\|/__\|/__\|/__\|/__\|
+" ____ ____ ____ ____
+" ||h |||j |||k |||l ||
+" ||__|||__|||__|||__||
+" |/__\|/__\|/__\|/__\|
 "
 " Jake Worth's Vim Configuration
+" Last updated: 2026-07-20
 
 " Plug ---------------------- {{{
 " Requires vim-plug:
@@ -43,6 +44,15 @@ let g:ale_linters_explicit = 1
 
 " Set this variable to 1 to fix files when you save them.
 let g:ale_fix_on_save = 1
+" }}}
+
+
+" COC ---------------------- {{{
+let g:coc_global_extensions = [
+    \ 'coc-tsserver',
+    \ 'coc-json',
+    \ 'coc-eslint'
+    \ ]
 " }}}
 
 " Settings ---------------------- {{{
