@@ -13,3 +13,7 @@
 .python-version
 slurper_config.yml
 *.bak
+
+.vale.ini
+/styles/Microsoft/
+/styles/.vale-config
