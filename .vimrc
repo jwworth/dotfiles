@@ -22,6 +22,7 @@ let g:ale_fixers = {
 \   'markdown': ['prettier'],
 \   'scss': ['prettier'],
 \   'html': ['prettier'],
+\   'astro': ['prettier'],
 \   'javascript': ['prettier'],
 \   'javascript.jsx': ['prettier'],
 \   'javascriptreact': ['prettier'],
