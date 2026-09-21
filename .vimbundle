@@ -68,4 +68,7 @@ Plug 'ervandew/supertab'
 " Smarter Vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Ruby!
+Plug 'vim-ruby/vim-ruby'
+
 call plug#end()
