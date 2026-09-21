@@ -161,6 +161,9 @@ twiki() {
 # }}}
 
 # Activate packages ---------------------- {{{
+# Load Mise
+eval "$(mise activate)"
+
 # Load fuzzy finding
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
