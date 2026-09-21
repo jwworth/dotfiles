@@ -5,8 +5,7 @@
 |/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|
 ```
 
-These are my dotfiles. They are heavily inspired by the [Hashrocket
-Dotmatrix][dotmatrix].
+These are my dotfiles.
 
 ### Setup (new machine)
 
@@ -28,5 +27,4 @@ This also creates global LLM skills symlinks via a submodule.
 
 These dotfiles are released under the [MIT License][mit].
 
-[dotmatrix]: https://github.com/hashrocket/dotmatrix
 [mit]: http://www.opensource.org/licenses/MIT
