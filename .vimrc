@@ -183,4 +183,7 @@ augroup END
 " Special and experimental commands ---------------------- {{{
 command! TILURL let @+ = 'https://www.jakeworth.com/tils/' . expand('%:t:r') . '/'
 command! TILOpen execute '!open https://www.jakeworth.com/tils/' . expand('%:t:r') . '/'
+
+let g:markdown_fenced_languages = ['javascript', 'typescript']
 " }}}
+"
