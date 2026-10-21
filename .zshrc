@@ -31,7 +31,7 @@ autoload -Uz vcs_info
 autoload -U colors; colors
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes false
-zstyle ':vcs_info:git*' formats "%{$fg[yellow]%}%r/%S%{$fg[white]%} %{$fg[green]%}%b%{$reset_color%} "
+zstyle ':vcs_info:git*' formats "%F{222}%r/%S%F{250} %F{151}%b%f "
 
 precmd() {
   git rev-parse --is-inside-work-tree &>/dev/null || {
