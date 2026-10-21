@@ -20,9 +20,6 @@ Plug 'leshill/vim-json'
 " TypeScript syntax support
 Plug 'leafgarland/typescript-vim'
 
-" Distraction-free writing mode
-Plug 'mikewest/vimroom'
-
 " Send ripgrep results to quickfix
 Plug 'jremmen/vim-ripgrep'
 
@@ -34,6 +31,9 @@ Plug 'tpope/vim-sensible'
 
 " Yay! You're on Rails!
 Plug 'tpope/vim-rails'
+
+" ...and Ruby!
+Plug 'vim-ruby/vim-ruby'
 
 " Commenting with `gc`
 Plug 'tpope/vim-commentary'
@@ -67,8 +67,5 @@ Plug 'ervandew/supertab'
 
 " Smarter Vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Ruby!
-Plug 'vim-ruby/vim-ruby'
 
 call plug#end()
