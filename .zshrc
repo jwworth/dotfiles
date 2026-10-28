@@ -143,7 +143,7 @@ prettify() {
 }
 
 # Open a canvas for drawing
-draw() {
+excalidraw() {
   open 'https://excalidraw.com/'
 }
 
